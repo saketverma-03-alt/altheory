@@ -1,4 +1,4 @@
-import Nav from "@/pages/app/components/navbar";
+import Nav from "@/pages/components/navbar";
 import BannerImage from "@public/banner.png";
 
 import Logo from "@public/logo.svg";
@@ -20,12 +20,13 @@ import ClientImg4 from "@public/client-4.svg";
 import BGImage from "@public/Background.svg";
 
 import Image from "next/image";
+import TestimonialSection from "./components/tetimonialSection";
 export default function Example() {
   return (
     <>
       <Nav />
       <main className="flex flex-col items-center text-secondary">
-        <section className="grid md:grid-cols-2 text-[#303030] h-full 2xl:max-w-7xl">
+        <section className="grid md:grid-cols-2 text-[#303030] h-full max-w-[1980px]">
           <div className="mx-16 flex flex-col  md:ml-24 my-14">
             <div>
               <h1 className="text-5xl  md:text-6xl font-bold leading-snug md:leading-normal">
@@ -58,34 +59,34 @@ export default function Example() {
               the way you work.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
-            <div className="flex p-4 max-w-md">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 my-8">
+            <div className="flex p-4 flex-col md:flex-row items-center">
               <figure className="mr-2">
                 <Image src={BulgGif} />
               </figure>
-              <div className="flex-1 space-y-2 ">
+              <div className="flex-1 space-y-2 text-center md:text-left">
                 <div className="font-bold">Grow your business</div>
                 <p className="text-muted">
                   We also help our clients with social media strategy
                 </p>
               </div>
             </div>
-            <div className="flex p-4">
+            <div className="flex p-4 flex-col md:flex-row items-center">
               <figure className="mr-2">
                 <Image src={CostGif} />
               </figure>
-              <div className="flex-1 space-y-2 ">
+              <div className="flex-1 space-y-2 text-center md:text-left ">
                 <div className="font-bold">Cost saving ideas</div>
                 <p className="text-muted">
                   We believe in challenges and so we have mode challenges.
                 </p>
               </div>
             </div>
-            <div className="flex p-4">
+            <div className="flex p-4 flex-col md:flex-row items-center">
               <figure className="mr-2">
                 <Image src={RocketGif} />
               </figure>
-              <div className="flex-1 space-y-2  ">
+              <div className="flex-1 space-y-2  text-center md:text-left">
                 <div className="font-bold">Boost performance</div>
                 <p className="text-muted">
                   We deliver email marketing campaigns to your audience.
@@ -96,7 +97,7 @@ export default function Example() {
         </section>
 
         {/* About us section */}
-        <section className="bg-[#FAFAFA] w-full grid grid-cols-2 p-20  max-w-[1440px]">
+        <section className="bg-[#FAFAFA] w-full grid md:grid-cols-2 p-10 md:p-20  ">
           <figure>
             <Image src={AboutUs} />
           </figure>
@@ -120,7 +121,11 @@ export default function Example() {
         </section>
         {/* our product section */}
 
-        <section className=" w-full grid grid-cols-2 p-20  max-w-[1440px]">
+        <section className=" w-full grid md:grid-cols-2 p-10 md:p-20  max-w-[1440px]">
+
+          <figure className="md:hidden ">
+            <Image src={ProdSecImaeg} />
+          </figure>
           <div className="mr-6">
             <div className="mb-2 text-md font-bold ">Our Product</div>
 
@@ -174,12 +179,12 @@ export default function Example() {
               Discover More
             </button>
           </div>
-          <figure>
+          <figure className="hidden md:block">
             <Image src={ProdSecImaeg} />
           </figure>
         </section>
         <section>
-          <div className="border-t border-muted mb-16">
+          <div className="border-t border-muted m-10 ">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-16 pt-16">
               <div className="flex items-center gap-4">
                 <span className="text-3xl">
@@ -234,6 +239,12 @@ export default function Example() {
           </p>
           {/*TODO: have to do some work here prob need interactive components*/}
         </section>
+        {/* Testimonial section */}
+        <section className="my-24">
+
+        <TestimonialSection />
+
+        </section>
         {/*Trusted By section*/}
         <section className="my-32 flex items-center flex-col">
           <h1 className="font-bold text-xl text-center mb-2">
@@ -243,14 +254,14 @@ export default function Example() {
             Unique and powerful suite of software to run your entire business,
             brought to you transform the way you work.
           </p>
-          <div className="flex gap-16 mt-16">
+          <div className="grid grid-cols-2 p-4 gap-16 mt-16 ">
             <Image src={ClientImg1} />
             <Image src={ClientImg2} />
             <Image src={ClientImg3} />
             <Image src={ClientImg4} />
           </div>
         </section>
-        <footer className="px-16 w-full max-w-7xl mt-44">
+        <footer className="px-4 md:px-16 w-full max-w-7xl mt-44">
           <div className="bg-[#4A4A4A] relative w-full h-full rounded-xl px-16 pb-16">
             <form
               style={{
@@ -259,16 +270,16 @@ export default function Example() {
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
-              className="absolute flex items-center px-12 py-16 w-full max-w-4xl top-0 right-1/2 translate-x-1/2 translate-y-[-50%] rounded-2xl"
+              className="absolute flex flex-col md:flex-row items-center p-8 md:px-12 md:py-16 w-full max-w-4xl top-0 right-1/2 translate-x-1/2 translate-y-[-50%] rounded-2xl"
             >
               <h3 className="text-2xl font-bold text-[#231656] flex-1">
                 Get Updates By Subscribe <br />
                 Our Weekly <span className="text-white"> Newsletter</span>
               </h3>
-              <div className="flex items-center gap-4">
+              <div className="flex md:items-center w-full md:w-fit mt-8 md:mt-0 md:flex-row gap-4 flex-col">
                 <input
                   type="email"
-                  className="p-4 rounded-full"
+                  className="p-4 rounded-full w-full"
                   placeholder="Enter your email"
                 />
                 <button

@@ -17,6 +17,10 @@ module.exports = {
         secondary: "hsl(var(--text))",
         muted: "hsl(var(--text-light))",
       },
+      fontFamily: {
+        sans: ['var(--font-os)'],
+        mono: ['var(--font-os)'],
+      },
     },
   },
   plugins: [],
