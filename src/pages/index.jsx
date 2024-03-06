@@ -122,7 +122,6 @@ export default function Example() {
         {/* our product section */}
 
         <section className=" w-full grid md:grid-cols-2 p-10 md:p-20  max-w-[1440px]">
-
           <figure className="md:hidden ">
             <Image src={ProdSecImaeg} />
           </figure>
@@ -241,27 +240,26 @@ export default function Example() {
         </section>
         {/* Testimonial section */}
         <section className="my-24">
-
-        <TestimonialSection />
-
+          <TestimonialSection />
         </section>
         {/*Trusted By section*/}
         <section className="my-32 flex items-center flex-col">
-          <h1 className="font-bold text-xl text-center mb-2">
-            Trusted by Teams Around The globally
+          <h1 className="font-bold text-3xl text-center mb-2">
+            Trusted By Teams Around The Globally
           </h1>
-          <p className="text-muted text-center text-sm max-w-sm">
-            Unique and powerful suite of software to run your entire business,
-            brought to you transform the way you work.
+          <p className="text-muted text-center text-sm ">
+            Unique And Powerful Suite Of Software To Run Your Entire Business,
+            <br />
+            Brought To You Transform The Way You Work.
           </p>
-          <div className="grid grid-cols-2 p-4 gap-16 mt-16 ">
+          <div className="grid md:flex grid-cols-2 p-4 gap-16 mt-16 ">
             <Image src={ClientImg1} />
             <Image src={ClientImg2} />
             <Image src={ClientImg3} />
             <Image src={ClientImg4} />
           </div>
         </section>
-        <footer className="px-4 md:px-16 w-full max-w-7xl mt-44">
+        <footer className="px-4 md:px-16 w-full max-w-7xl mt-24">
           <div className="bg-[#4A4A4A] relative w-full h-full rounded-xl px-16 pb-16">
             <form
               style={{
