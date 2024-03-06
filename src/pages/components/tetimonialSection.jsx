@@ -37,7 +37,7 @@ export default function TestimonialSection() {
         </div>
         {/* cards */}
         <div>
-          <div className=" p-8 flex flex-col md:flex-row gap-4">
+          <div className=" p-8 flex flex-col lg:flex-row gap-4">
             {testmPageNum === 1 && (
               <>
                 <TestimonialCard key={1} />
@@ -155,33 +155,35 @@ function TestimonialFoot() {
   }
   return (
     <>
-      <div className="relative bg-[#303030] w-full h-[100vh] ">
+      <div className="relative bg-[#303030] w-full py-36 grid place-items-center ">
         <figure>
           <Image
             className="absolute z-10 top-1/2 right-1/2 translate-x-1/2 translate-y-[-50%]"
             src={Pattern}
           />
         </figure>
-        <div className="flex z-20 relative justify-around h-full items-center text-white">
+        <div className="flex z-20 relative justify-around h-full items-center max-w-[1980px]  text-white">
           <button
             onClick={() => changeTestiPageNum(testmPageNum - 1)}
-            className="p-2 bg-gray-800 shadow-lg rounded-full text-white"
+            className=" bg-gray-800 hover:bg-gray-800/50 p-8 text-3xl rounded-full text-white"
           >
             <ChevronLeft />
           </button>
-          {testmPageNum === 1 && (
-            <>
-              <TestimonialFootCard key={1} />
-            </>
-          )}
-          {testmPageNum === 2 && (
-            <>
-              <TestimonialFootCard key={2} />
-            </>
-          )}
+          <div className="lg:mx-36">
+            {testmPageNum === 1 && (
+              <>
+                <TestimonialFootCard key={1} />
+              </>
+            )}
+            {testmPageNum === 2 && (
+              <>
+                <TestimonialFootCard key={2} />
+              </>
+            )}
+          </div>
           <button
             onClick={() => changeTestiPageNum(testmPageNum + 1)}
-            className="p-2 bg-gray-800 rounded-full text-white"
+            className=" bg-gray-800 hover:bg-gray-800/50 p-8 text-3xl rounded-full text-white"
           >
             <ChevronRight />
           </button>

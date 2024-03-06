@@ -21,30 +21,33 @@ import BGImage from "@public/Background.svg";
 
 import Image from "next/image";
 import TestimonialSection from "./components/tetimonialSection";
+import { UsepSectin } from "./components/UspSection";
 export default function Example() {
   return (
     <>
       <Nav />
       <main className="flex flex-col items-center text-secondary">
         <section className="grid md:grid-cols-2 text-[#303030] h-full max-w-[1980px]">
-          <div className="mx-16 flex flex-col  md:ml-24 my-14">
+          <div className="mx-16 flex flex-col  w-full col-span-2 lg:col-span-1 md:ml-24 my-14">
             <div>
               <h1 className="text-5xl  md:text-6xl font-bold leading-snug md:leading-normal">
-                Enhance Your Business Operations With{" "}
-                <span className="text-primary">Altheory</span> Technologies
+                Enhance Your <br /> Business Operations <br /> With{" "}
+                <span className="text-primary">Altheory</span>
+                <br />
+                Technologies
               </h1>
               <p className="text-md font-thin text-opacity-85">
                 BUSINESS MANAGEMENT SOFTWARE COMPANY
               </p>
             </div>
-            <div className="my-8">
+            <div className="my-8 flex w-full">
               <button className="bg-secondary font-bold text-white p-4 px-6">
                 Get Started
               </button>
               <button className="font-bold p-4 px-6">How It Works</button>
             </div>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Image src={BannerImage} />
           </div>
         </section>
@@ -227,15 +230,8 @@ export default function Example() {
           </div>
         </section>
         {/*Product USP section*/}
-        <section>
-          <div className="text-4xl text-center font-bold">
-            Product <span className="text-primary ">USP</span>
-          </div>
-          <p className="max-w-3xl text-center text-muted">
-            With our business management software, you'll unlock the full
-            potential of your business, streamline operations, and achieve
-            sustainable growth. Experience the difference today.
-          </p>
+        <section className="flex flex-col mt-28">
+          <UsepSectin />
           {/*TODO: have to do some work here prob need interactive components*/}
         </section>
         {/* Testimonial section */}
@@ -252,7 +248,7 @@ export default function Example() {
             <br />
             Brought To You Transform The Way You Work.
           </p>
-          <div className="grid md:flex grid-cols-2 p-4 gap-16 mt-16 ">
+          <div className="grid lg:flex grid-cols-2 p-4 gap-16 mt-16 ">
             <Image src={ClientImg1} />
             <Image src={ClientImg2} />
             <Image src={ClientImg3} />
@@ -299,7 +295,7 @@ export default function Example() {
                   aut! Obcaecati aperiam ducimus et optio iste libero,
                 </p>
               </div>
-              <div className="px-16 text-white/90 flex  justify-between flex-1">
+              <div className="px-16 text-white/90 flex hidden justify-between flex-1">
                 <ul className="flex flex-col space-y-2">
                   <div className="text-primary mb-2">Menu</div>
                   <a href="">Home</a>
