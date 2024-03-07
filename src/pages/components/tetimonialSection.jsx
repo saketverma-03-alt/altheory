@@ -106,8 +106,9 @@ function TestimonialCard() {
               <Image src={companyLogo1} />
             </figure>
             <figure className="flex gap-1">
-              {[0, 0, 0, 0, 0].map(() => (
+              {[0, 0, 0, 0, 0].map((_, idx) => (
                 <Image
+                  key={idx}
                   src={star}
                   className="h-4 w-4"
                   height={100}
@@ -218,8 +219,14 @@ const TestimonialFootCard = () => {
           <h3 className="font-bold text-3xl mt-4">Atul Soni</h3>
           <h4>Analysist</h4>
           <figure className="flex gap-1 my-6">
-            {[0, 0, 0, 0, 0].map(() => (
-              <Image src={star} className="h-4 w-4" height={100} width={100} />
+            {[0, 0, 0, 0, 0].map((_, idx) => (
+              <Image
+                src={star}
+                key={idx}
+                className="h-4 w-4"
+                height={100}
+                width={100}
+              />
             ))}
           </figure>
           <p className="text-center max-w-md leading-relaxed">
