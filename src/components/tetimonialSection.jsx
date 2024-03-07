@@ -163,10 +163,10 @@ function TestimonialFoot() {
             src={Pattern}
           />
         </figure>
-        <div className="flex z-20 relative justify-around h-full items-center max-w-[1980px]  text-white">
+        <div className="flex z-20 px-2 relative justify-around h-full items-center max-w-[1980px]  text-white">
           <button
             onClick={() => changeTestiPageNum(testmPageNum - 1)}
-            className=" bg-gray-800 hover:bg-gray-800/50 p-8 text-3xl rounded-full text-white"
+            className=" bg-gray-800 hover:bg-gray-800/50 p-4 md:p-8 text-3xl rounded-full text-white"
           >
             <ChevronLeft />
           </button>
@@ -184,7 +184,7 @@ function TestimonialFoot() {
           </div>
           <button
             onClick={() => changeTestiPageNum(testmPageNum + 1)}
-            className=" bg-gray-800 hover:bg-gray-800/50 p-8 text-3xl rounded-full text-white"
+            className=" bg-gray-800 p-4  hover:bg-gray-800/50 md:p-8 text-3xl rounded-full text-white"
           >
             <ChevronRight />
           </button>

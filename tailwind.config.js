@@ -21,7 +21,12 @@ module.exports = {
         sans: ['var(--font-os)'],
         mono: ['var(--font-os)'],
       },
+      boxShadow:{
+        bal: ['rgba(17,17,26,0.1) 0px 0px 16px']
+      }
     },
   },
   plugins: [],
 };
+
+// box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;

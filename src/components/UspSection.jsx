@@ -14,41 +14,79 @@ export function UsepSectin() {
       <div className="mx-auto mb-2  text-4xl font-bold">
         Product <span className="text-primary ">USP</span>
       </div>
-      <p className="max-w-3xl text-center text-muted">
+      <p className="max-w-3xl text-center text-sm sm:text-md text-muted">
         With our business management software, you'll unlock the full potential
         of your business,
         <br /> streamline operations, and achieve sustainable growth. Experience
         the difference today.
       </p>
+      {/*shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]  */}
       <div className="flex mt-24 ">
-        <div className="grid grid-cols-3 h-full ">
-          <div
-            className="flex items-center
-          flex-col gap-8 my-auto"
-          >
+        <div className="grid grid-cols-1 md:grid-cols-3 ">
+          <div className="grid grid-cols-2 md:grid-cols-1  p-4  text-left">
             <button
               onClick={(e) => setSelected(0)}
               value={0}
               className={`${
-                selected === 0 ? "text-primary shadow-xl" : ""
-              } "px-6 py-4 flex gap-4  " `}
+                selected === 0 ? "text-primary shadow-bal" : ""
+              } px-6 py-4 flex gap-2  text-left h-fit
+               `}
             >
-              <Lightbulb />
-              <span className=" flex items-center">Customizable Solutions</span>
+              <div className="h-12 w-12 grid place-items-center">
+                <Lightbulb className="self-center " />
+              </div>
+              <span className="flex-1 block my-auto text-sm">
+                Customizable Solutions
+              </span>
             </button>
             <button
               onClick={(e) => setSelected(1)}
               value={0}
               className={`${
-                selected === 1 ? "text-primary shadow-xl" : ""
-              } "px-6 py-4 flex gap-4  " `}
+                selected === 1 ? "text-primary shadow-bal" : ""
+              } px-6 py-4 flex gap-2  text-left h-fit  `}
             >
-              <Lightbulb />
-              <span className=" flex items-center">Customizable Solutions</span>
+              <div className="h-12 w-12 grid place-items-center">
+                <Lightbulb className="self-center " />
+              </div>
+              <span className="flex-1 block my-auto text-sm">
+                Customizable Solutions
+              </span>
+            </button>
+            <button
+              onClick={(e) => setSelected(2)}
+              value={2}
+              className={`${
+                selected === 2 ? "text-primary shadow-bal" : ""
+              } px-6 py-4 flex gap-2  text-left  h-fit `}
+            >
+              <div className="h-12 w-12 grid place-items-center">
+                <Lightbulb className="self-center " />
+              </div>
+              <span className="flex-1 block my-auto text-sm">
+                Customizable Solutions
+              </span>
+            </button>
+            <button
+              onClick={(e) => setSelected(3)}
+              value={0}
+              className={`${
+                selected === 3 ? "text-primary shadow-bal" : ""
+              } px-6 py-4 flex gap-2  text-left  h-fit `}
+            >
+              <div className="h-12 w-12 grid place-items-center">
+                <Lightbulb className="self-center " />
+              </div>
+              <span className="flex-1 block my-auto text-sm">
+                Customizable Solutions
+              </span>
             </button>
           </div>
-          <div className="grid col-span-2 grid-cols-2 gap-20">
+          <div className="grid md:col-span-2 grid-cols-1 md:grid-cols-2  p-6 gap-20">
             {selected === 0 && <Usp1 />}
+            {selected === 1 && <Usp1 />}
+            {selected === 2 && <Usp1 />}
+            {selected === 3 && <Usp1 />}
           </div>
         </div>
       </div>
@@ -59,16 +97,16 @@ export function UsepSectin() {
 const Usp1 = () => {
   return (
     <>
-      <Image src={MainImage} className="rounded-xl  object-cover mr-20" />
+      <Image src={MainImage} className="rounded-xl  object-cover md:mr-20" />
       <div className="flex justify-center flex-col">
         <figure
-          className="rounded-full shadow-xl grid place-items-center p-6   border border-gray-200 h-24 w-24
+          className="rounded-full shadow-bal grid place-items-center p-6    border-gray-200 h-20 w-20 md:h-24 md:w-24
         "
         >
           <Image src={CustmSol} className="h-full w-full" />
         </figure>
         <p
-          className="mt-10 mb-8 max-w-64
+          className="mt-8 mb-8 max-w-64 text-muted
         "
         >
           We understand that every business is unique. Our software can be fully

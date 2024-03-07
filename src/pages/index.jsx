@@ -1,6 +1,8 @@
 import { Nav } from "@/components/navbar";
 import BannerImage from "@public/banner.png";
 
+import AltheoryLogoW from "@public/altheory-logo-w.svg";
+
 import Logo from "@public/logo.svg";
 import AboutUs from "@public/aboutUs.png";
 import BulgGif from "@public/gif-1.gif";
@@ -22,15 +24,23 @@ import BGImage from "@public/Background.svg";
 import Image from "next/image";
 import { TestimonialSection } from "@/components/tetimonialSection";
 import { UsepSectin } from "@/components/UspSection";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  Linkedin,
+  TwitterIcon,
+  YoutubeIcon,
+} from "lucide-react";
 export default function Example() {
   return (
     <>
       <Nav />
       <main className="flex flex-col items-center text-secondary">
         <section className="grid md:grid-cols-2  text-[#303030] h-full max-w-[1980px]">
-          <div className="md:mx-16 p-6 flex flex-col   col-span-2 lg:col-span-1 md:ml-24 my-14">
+          <div className="md:mx-16 relative p-6 flex flex-col   col-span-2 lg:col-span-1 md:ml-24 my-14">
+            <div className="absolute z-10 bg-[#FDA55C]/70 h-56 w-56 top-0 left-0 blur-3xl opacity-80"></div>
             <div className="">
-              <h1 className="text-5xl  md:text-6xl font-bold leading-snug md:leading-normal">
+              <h1 className="text-5xl  relative z-30 md:text-6xl font-bold leading-snug md:leading-normal">
                 Enhance Your <br /> Business Operations <br /> With{" "}
                 <span className="text-primary">Altheory</span>
                 <br />
@@ -40,11 +50,14 @@ export default function Example() {
                 BUSINESS MANAGEMENT SOFTWARE COMPANY
               </p>
             </div>
-            <div className="my-8 flex w-full">
-              <button className="bg-secondary font-bold text-white p-4 px-6">
+            <div className="my-8 flex w-full relative">
+              <div className="absolute z-10 bg-blue-500 h-32 w-32 top-0 left-12 blur-3xl opacity-80"></div>
+              <button className="bg-secondary relative z-20 font-bold text-white p-4 px-6">
                 Get Started
               </button>
-              <button className="font-bold p-4 px-6">How It Works</button>
+              <button className="font-bold p-4 px-6 relative z-20">
+                How It Works
+              </button>
             </div>
           </div>
           <div className="hidden lg:block">
@@ -85,7 +98,7 @@ export default function Example() {
                 </p>
               </div>
             </div>
-            <div className="flex p-4 flex-col md:flex-row items-center">
+            <div className="flex col-span-2 md:col-span-1 p-4 flex-col md:flex-row items-center">
               <figure className="mr-2">
                 <Image src={RocketGif} />
               </figure>
@@ -124,7 +137,7 @@ export default function Example() {
         </section>
         {/* our product section */}
 
-        <section className=" w-full grid md:grid-cols-2 p-10 md:p-20  max-w-[1440px]">
+        <section className=" w-full grid md:grid-cols-2 p-6 md:p-20  max-w-[1440px]">
           <figure className="md:hidden ">
             <Image src={ProdSecImaeg} />
           </figure>
@@ -256,73 +269,85 @@ export default function Example() {
           </div>
         </section>
         <footer className="px-4 md:px-16 w-full max-w-7xl mt-24">
-          <div className="bg-[#4A4A4A] relative w-full h-full rounded-xl px-16 pb-16">
-            <form
-              style={{
-                backgroundImage: `url(${BGImage.src})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}
-              className="absolute flex flex-col md:flex-row items-center p-8 md:px-12 md:py-16 w-full max-w-4xl top-0 right-1/2 translate-x-1/2 translate-y-[-50%] rounded-2xl"
-            >
-              <h3 className="text-2xl font-bold text-[#231656] flex-1">
-                Get Updates By Subscribe <br />
-                Our Weekly <span className="text-white"> Newsletter</span>
-              </h3>
-              <div className="flex md:items-center w-full md:w-fit mt-8 md:mt-0 md:flex-row gap-4 flex-col">
-                <input
-                  type="email"
-                  className="p-4 rounded-full w-full"
-                  placeholder="Enter your email"
-                />
-                <button
-                  className="p-4 rounded-full bg-[#231656] text-white"
-                  type="submit"
-                  placeholder="asda"
-                >
-                  Subscripbe
-                </button>
-              </div>
-            </form>
+          <form
+            style={{
+              backgroundImage: `url(${BGImage.src})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+            className=" flex flex-col md:flex-row items-center shadow-bal p-8 md:px-12 md:py-16 w-full max-w-4xl relative mb-[-100px] mx-auto z-50
+               rounded-2xl"
+          >
+            <h3 className="text-2xl font-bold text-[#231656] flex-1">
+              Get Updates By Subscribe <br />
+              Our Weekly <span className="text-white"> Newsletter</span>
+            </h3>
+            <div className="flex md:items-center w-full md:w-fit mt-8 md:mt-0 md:flex-row gap-4 flex-col">
+              <input
+                type="email"
+                className="p-4 rounded-full w-full"
+                placeholder="Enter your email"
+              />
+              <button
+                className="p-4 rounded-full bg-[#231656] text-white"
+                type="submit"
+                placeholder="asda"
+              >
+                Subscripbe
+              </button>
+            </div>
+          </form>
 
-            <div className="flex pt-40 ">
-              <div className="border-r border-gray-500 pr-8">
-                <Image src={Logo} />
+          <div className="bg-[#4A4A4A] relative w-full h-full rounded-xl px-16 pb-16">
+            <div className="flex flex-col md:flex-row pt-40 gap-8 ">
+              <div className="md:border-r border-gray-500 pr-8">
+                <Image src={AltheoryLogoW} />
                 <p className="max-w-sm text-white/70 my-4 text-sm ">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Asperiores sequi veritatis rerum omnis cum quidem, tempora
                   aut! Obcaecati aperiam ducimus et optio iste libero,
                 </p>
+                <ul className="flex gap-4">
+                  <InstagramIcon className="text-white/80 hover:text-primary cursor-pointer" />
+                  <FacebookIcon className="text-white/80 hover:text-primary cursor-pointer" />
+                  <TwitterIcon className="text-white/80 hover:text-primary cursor-pointer" />
+                  <Linkedin className="text-white/80 hover:text-primary cursor-pointer" />
+                  <YoutubeIcon className="text-white/80 hover:text-primary cursor-pointer" />
+                </ul>
               </div>
-              <div className="px-16 text-white/90 flex hidden justify-between flex-1">
-                <ul className="flex flex-col space-y-2">
-                  <div className="text-primary mb-2">Menu</div>
-                  <a href="">Home</a>
-                  <a href="">About</a>
-                  <a href="">Product</a>
-                  <a href="">Career</a>
-                  <a href="">Contact</a>
+              <div className=" text-white/90 flex flex-col md:flex-row gap-8 flex-1">
+                <ul className="flex flex-col">
+                  <div className="text-primary ">Menu</div>
+                  <div className=" flex md:flex-col gap-2 md:gap-1">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">
+                      Product{" "}
+                      <span className="inline-block bg-green-500 text-xs px-1 rounded-full">
+                        OFFER
+                      </span>{" "}
+                    </a>
+                    <a href="">Career</a>
+                    <a href="">Contact</a>
+                  </div>
                 </ul>
-                <ul className="flex flex-col space-y-2">
-                  <div className="text-primary mb-2">Menu</div>
-                  <a href="">Home</a>
-                  <a href="">About</a>
-                  <a href="">Product</a>
-                  <a href="">Career</a>
-                  <a href="">Contact</a>
+                <ul className="flex flex-col">
+                  <div className="text-primary   ">Address</div>
+                  <div className=" flex md:flex-col gap-2 md:gap-1">
+                    <p className="max-w-48">
+                      Leoxsys Building, 4th Floor, Maheshwari Nagar,
+                      Mahadevpura, Bangalore, Karnataka, 560043, IN
+                    </p>
+                  </div>
                 </ul>
-                <ul className="flex flex-col space-y-2">
-                  <div className="text-primary mb-2">Say Hellow</div>
-                  <a href="">+91 9999 111 123</a>
-                  <a href="">+91 0111 234 567</a>
-                  <a href="">info@Altheory.in</a>
-                  <a
-                    href=""
-                    className="bg-primary text-white px-4 py-3 w-fit mt-8 block  text-sm font-bold rounded-full"
-                  >
-                    GET A QUOT
-                  </a>
+                <ul className="flex flex-col">
+                  <div className="text-primary   ">Say Hellow</div>
+                  <div className=" flex md:flex-col gap-4  md:gap-1">
+                    <div className="w-fit">+91 9999 111 123</div>
+                    <div>+91 0111 234 567</div>
+                    <div>info@Altheory.in</div>
+                  </div>
                 </ul>
               </div>
             </div>
