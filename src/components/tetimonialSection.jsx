@@ -9,7 +9,7 @@ import { Transition } from "@headlessui/react";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function TestimonialSection() {
+export function TestimonialSection() {
   const [testmPageNum, setTestPageNum] = useState(1);
   const MAX_PAGE = 2;
   const MIN_PAGE = 1;

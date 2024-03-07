@@ -18,7 +18,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Nav() {
+export const Nav = () => {
   return (
     <Disclosure
       as="nav"
@@ -97,4 +97,4 @@ export default function Nav() {
       )}
     </Disclosure>
   );
-}
+};

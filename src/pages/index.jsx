@@ -1,4 +1,4 @@
-import Nav from "@/pages/components/navbar";
+import { Nav } from "@/components/navbar";
 import BannerImage from "@public/banner.png";
 
 import Logo from "@public/logo.svg";
@@ -20,8 +20,8 @@ import ClientImg4 from "@public/client-4.svg";
 import BGImage from "@public/Background.svg";
 
 import Image from "next/image";
-import TestimonialSection from "./components/tetimonialSection";
-import { UsepSectin } from "./components/UspSection";
+import { TestimonialSection } from "@/components/tetimonialSection";
+import { UsepSectin } from "@/components/UspSection";
 export default function Example() {
   return (
     <>
