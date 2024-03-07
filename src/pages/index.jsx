@@ -40,7 +40,7 @@ export default function Example() {
           <div className="md:mx-16 relative p-6 flex flex-col   col-span-2 lg:col-span-1 md:ml-24 my-14">
             <div className="absolute z-10 bg-[#FDA55C]/70 h-56 w-56 top-0 left-0 blur-3xl opacity-80"></div>
             <div className="">
-              <h1 className="text-5xl  relative z-30 md:text-6xl font-bold leading-snug md:leading-normal">
+              <h1 className="text-3xl sm:text-5xl  relative z-30 md:text-6xl font-bold leading-snug md:leading-normal">
                 Enhance Your <br /> Business Operations <br /> With{" "}
                 <span className="text-primary">Altheory</span>
                 <br />
@@ -268,7 +268,7 @@ export default function Example() {
             <Image src={ClientImg4} />
           </div>
         </section>
-        <footer className="px-4 md:px-16 w-full max-w-7xl mt-24">
+        <footer className=" md:px-16 w-full max-w-7xl mt-24">
           <form
             style={{
               backgroundImage: `url(${BGImage.src})`,
@@ -299,7 +299,7 @@ export default function Example() {
             </div>
           </form>
 
-          <div className="bg-[#4A4A4A] relative w-full h-full rounded-xl px-16 pb-16">
+          <div className="bg-[#4A4A4A] relative w-full h-full rounded-xl px-8 md:px-16 pb-16">
             <div className="flex flex-col md:flex-row pt-40 gap-8 ">
               <div className="md:border-r border-gray-500 pr-8">
                 <Image src={AltheoryLogoW} />
@@ -319,7 +319,7 @@ export default function Example() {
               <div className=" text-white/90 flex flex-col md:flex-row gap-8 flex-1">
                 <ul className="flex flex-col">
                   <div className="text-primary ">Menu</div>
-                  <div className=" flex md:flex-col gap-2 md:gap-1">
+                  <div className=" flex md:flex-col gap-2 flex-wrap md:gap-1">
                     <a href="">Home</a>
                     <a href="">About</a>
                     <a href="">
@@ -343,7 +343,7 @@ export default function Example() {
                 </ul>
                 <ul className="flex flex-col">
                   <div className="text-primary   ">Say Hellow</div>
-                  <div className=" flex md:flex-col gap-4  md:gap-1">
+                  <div className=" flex flex-col gap-1">
                     <div className="w-fit">+91 9999 111 123</div>
                     <div>+91 0111 234 567</div>
                     <div>info@Altheory.in</div>
@@ -353,7 +353,7 @@ export default function Example() {
             </div>
           </div>
 
-          <div className="text-muted flex w-full my-4 text-sm">
+          <div className="text-muted flex w-full my-4 px-2 text-sm">
             <span className="block">
               Copyright © <span className="text-secondary font-bold"></span> |
               is Proudly Powered by Altheory
