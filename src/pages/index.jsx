@@ -28,7 +28,7 @@ export default function Example() {
       <Nav />
       <main className="flex flex-col items-center text-secondary">
         <section className="grid md:grid-cols-2 text-[#303030] h-full max-w-[1980px]">
-          <div className="mx-16 flex flex-col  w-full col-span-2 lg:col-span-1 md:ml-24 my-14">
+          <div className="mx-16 flex flex-col   col-span-2 lg:col-span-1 md:ml-24 my-14">
             <div>
               <h1 className="text-5xl  md:text-6xl font-bold leading-snug md:leading-normal">
                 Enhance Your <br /> Business Operations <br /> With{" "}
