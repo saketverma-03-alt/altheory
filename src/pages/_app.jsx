@@ -1,7 +1,7 @@
-import { Open_Sans } from "next/font/google";
+import { Jost } from "next/font/google";
 
 import "@/styles/globals.css";
-const OpenSans = Open_Sans({
+const OpenSans = Jost({
   subsets: ["latin"],
   variable: "--font-os",
 });
