@@ -14,7 +14,7 @@ export function UsepSectin() {
       <div className="mx-auto mb-2  text-4xl font-bold">
         Product <span className="text-primary ">USP</span>
       </div>
-      <p className="max-w-3xl text-center text-sm sm:text-md text-muted">
+      <p className=" text-center text-sm sm:text-md text-muted w-full px-4">
         With our business management software, you'll unlock the full potential
         of your business,
         <br /> streamline operations, and achieve sustainable growth. Experience
@@ -114,7 +114,7 @@ const Usp1 = () => {
           industry requirements, ensuring optimal performance and productivity
         </p>
 
-        <button className=" w-fit bg-primary text-white rounded-xl hover:bg-primary/50  px-6">
+        <button className="btn-primary w-fit  text-white rounded-xl   px-6">
           Explor Now
         </button>
       </div>

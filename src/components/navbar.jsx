@@ -1,8 +1,5 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import logo from "@public/logo.svg";
-
-const inter = Inter({ subsets: ["latin"] });
 
 import { Disclosure } from "@headlessui/react";
 import { Menu } from "lucide-react";
@@ -68,7 +65,7 @@ export const Nav = () => {
                 </button>
 
                 {/* Profile dropdown */}
-                <button as="div" className="bg-primary text-white">
+                <button as="div" className="bg-primary btn-primary text-white">
                   Get Started
                 </button>
               </div>

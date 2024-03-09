@@ -31,38 +31,16 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from "lucide-react";
+import { HeroSection } from "@/components/heroSection";
+import { AboutusSection } from "@/components/abutUsSection";
+import { OurProductSection } from "@/components/ourproductSecction";
 export default function Example() {
   return (
     <>
       <Nav />
       <main className="flex flex-col items-center text-secondary">
-        <section className="grid md:grid-cols-2  text-[#303030] h-full max-w-[1980px]">
-          <div className="md:mx-16 relative p-6 flex flex-col   col-span-2 lg:col-span-1 md:ml-24 my-14">
-            <div className="absolute z-10 bg-[#FDA55C]/70 h-56 w-56 top-0 left-0 blur-3xl opacity-80"></div>
-            <div className="">
-              <h1 className="text-3xl sm:text-5xl  relative z-30 md:text-6xl font-bold leading-snug md:leading-normal">
-                Enhance Your <br /> Business Operations <br /> With{" "}
-                <span className="text-primary">Altheory</span>
-                <br />
-                Technologies
-              </h1>
-              <p className="text-md font-thin text-opacity-85">
-                BUSINESS MANAGEMENT SOFTWARE COMPANY
-              </p>
-            </div>
-            <div className="my-8 flex w-full relative">
-              <div className="absolute z-10 bg-blue-500 h-32 w-32 top-0 left-12 blur-3xl opacity-80"></div>
-              <button className="bg-secondary relative z-20 font-bold text-white p-4 px-6">
-                Get Started
-              </button>
-              <button className="font-bold p-4 px-6 relative z-20">
-                How It Works
-              </button>
-            </div>
-          </div>
-          <div className="hidden lg:block">
-            <Image src={BannerImage} />
-          </div>
+        <section className="]">
+          <HeroSection />
         </section>
         <section className="max-w-7xl">
           <div className="mb-10">
@@ -113,91 +91,16 @@ export default function Example() {
         </section>
 
         {/* About us section */}
-        <section className="bg-[#FAFAFA] w-full grid md:grid-cols-2 p-10 md:p-20  ">
-          <figure>
-            <Image src={AboutUs} />
-          </figure>
-          <div>
-            <div className="mb-2 text-md font-bold ">About Us</div>
-            <h3 className="mb-6 leading-snug text-4xl font-bold">
-              {" "}
-              Altheory technologies & Super{" "}
-              <span className="text-primary">Powerful</span>
-            </h3>
-            <p className="mb-12  text-muted">
-              At Altheory, we are dedicated to empowering businesses with
-              cutting-edge software solutions tailored to their unique needs.
-              With a passion for innovation and a commitment to excellence, we
-              have been a trusted partner for organizations of all sizes,
-              helping them streamline their operations, boost efficiency, and
-              achieve their business goals.
-            </p>
-            <button className="bg-primary text-white">Read More</button>
-          </div>
+        <section className="bg-[#FAFAFA] w-full flex flex-col items-center  ">
+          <AboutusSection />
         </section>
         {/* our product section */}
 
         <section className=" w-full grid md:grid-cols-2 p-6 md:p-20  max-w-[1440px]">
-          <figure className="md:hidden ">
-            <Image src={ProdSecImaeg} />
-          </figure>
-          <div className="mr-6">
-            <div className="mb-2 text-md font-bold ">Our Product</div>
-
-            <h3 className="mb-6 leading-snug text-4xl font-bold">
-              {" "}
-              Elevate Your Lifestyle With Our Premium{" "}
-              <span className="text-primary">Products</span>
-            </h3>
-            <div className="space-y-2 max-w-lg mb-8">
-              <div className="flex gap-4 items-center p-4 rounded-xl shadow-sm">
-                <figure className="bg-gray-200 rounded-full p-3 h-fit w-fit">
-                  <Image src={ProdSecIcon1} />
-                </figure>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold ">Onbordme</h3>
-                  <p className="text-muted text-sm font-thin">
-                    Lorem Ipsum has been the industry standard from a dummy text
-                    ever since the unknown printer to galley of type book.{" "}
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4 items-center p-4 rounded-xl shadow-sm">
-                <figure className="bg-gray-200 rounded-full p-3 h-fit w-fit">
-                  <Image src={ProdSecIcon2} />
-                </figure>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold ">Cluster HRMS</h3>
-                  <p className="text-muted font-thin text-sm">
-                    Lorem Ipsum has been the industry standard from a dummy text
-                    ever since the unknown printer to galley of type book.{" "}
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4 items-center p-4 rounded-xl shadow-sm">
-                <figure className="bg-gray-200 rounded-full p-3 h-fit w-fit">
-                  <Image src={ProdSecIcon3} />
-                </figure>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold ">
-                    Facility Management
-                  </h3>
-                  <p className="text-muted font-thin text-sm">
-                    Lorem Ipsum has been the industry standard from a dummy text
-                    ever since the unknown printer to galley of type book.{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <button className="bg-primary p-4 text-white font-bold">
-              Discover More
-            </button>
-          </div>
-          <figure className="hidden md:block">
-            <Image src={ProdSecImaeg} />
-          </figure>
+          <OurProductSection />
         </section>
+
+        {/* STATS section */}
         <section>
           <div className="border-t border-muted m-10 ">
             <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-4 gap-16 pt-16">
@@ -253,10 +156,10 @@ export default function Example() {
         </section>
         {/*Trusted By section*/}
         <section className="my-32 flex items-center flex-col">
-          <h1 className="font-bold text-3xl text-center mb-2">
+          <h1 className="font-bold text-3xl text-center mb-2 px-4">
             Trusted By Teams Around The Globally
           </h1>
-          <p className="text-muted text-center text-sm ">
+          <p className="text-muted text-center text-sm px-6">
             Unique And Powerful Suite Of Software To Run Your Entire Business,
             <br />
             Brought To You Transform The Way You Work.

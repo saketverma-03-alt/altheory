@@ -29,7 +29,7 @@ export function TestimonialSection() {
           <h3 className="text-6xl font-bold  mt-2 mb-6">
             What People <br /> <span className="text-primary"> Say</span>
           </h3>
-          <p>
+          <p className="">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
             corporis quam eius reprehenderit, suscipit provident, eligendi
             veritatis, quidem delectus dolorum esse amet molestias explicabo?
