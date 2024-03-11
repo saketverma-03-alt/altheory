@@ -39,15 +39,15 @@ export default function Example() {
     <>
       <Nav />
       <main className="flex flex-col items-center text-secondary">
-        <section className="]">
+        <section className="">
           <HeroSection />
         </section>
-        <section className="max-w-7xl">
+        <section className="max-w-6xl mt-12">
           <div className="mb-10">
-            <div className="text-4xl  font-bold text-center mb-4">
+            <div className="text-2xl  font-semibold text-center mb-4">
               Explore Premium Features
             </div>
-            <p className="mx-auto text-center max-w-2xl  text-muted ">
+            <p className="mx-auto px-10 text-center max-w-2xl leading-[26px]  text-muted ">
               Unique and powerful suite of software to run your entire business,
               brought to you by a company with the long term vision to transform
               the way you work.
@@ -55,33 +55,33 @@ export default function Example() {
           </div>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 my-8">
             <div className="flex p-4 flex-col md:flex-row items-center">
-              <figure className="mr-2">
-                <Image src={BulgGif} />
+              <figure className="mr-6 w-20 h-20">
+                <Image src={BulgGif} width={80} height={80} />
               </figure>
               <div className="flex-1 space-y-2 text-center md:text-left">
-                <div className="font-bold">Grow your business</div>
+                <div className="font-[500] text-xl">Grow your business</div>
                 <p className="text-muted">
                   We also help our clients with social media strategy
                 </p>
               </div>
             </div>
             <div className="flex p-4 flex-col md:flex-row items-center">
-              <figure className="mr-2">
+              <figure className="mr-6 w-20 h-20">
                 <Image src={CostGif} />
               </figure>
               <div className="flex-1 space-y-2 text-center md:text-left ">
-                <div className="font-bold">Cost saving ideas</div>
+                <div className="font-[500] text-xl">Cost saving ideas</div>
                 <p className="text-muted">
                   We believe in challenges and so we have mode challenges.
                 </p>
               </div>
             </div>
             <div className="flex col-span-2 md:col-span-1 p-4 flex-col md:flex-row items-center">
-              <figure className="mr-2">
+              <figure className="mr-6 w-20 h-20">
                 <Image src={RocketGif} />
               </figure>
               <div className="flex-1 space-y-2  text-center md:text-left">
-                <div className="font-bold">Boost performance</div>
+                <div className="font-[500] text-xl">Boost performance</div>
                 <p className="text-muted">
                   We deliver email marketing campaigns to your audience.
                 </p>
@@ -91,12 +91,12 @@ export default function Example() {
         </section>
 
         {/* About us section */}
-        <section className="bg-[#FAFAFA] w-full flex flex-col items-center  ">
+        <section id="about" className="bg-[#FAFAFA] w-full flex flex-col items-center  ">
           <AboutusSection />
         </section>
         {/* our product section */}
 
-        <section className=" w-full grid md:grid-cols-2 p-6 md:p-20  max-w-[1440px]">
+        <section id="products" className=" w-full grid md:grid-cols-2 p-6 md:p-20  max-w-[100rem] lg:px-36">
           <OurProductSection />
         </section>
 
@@ -151,11 +151,11 @@ export default function Example() {
           {/*TODO: have to do some work here prob need interactive components*/}
         </section>
         {/* Testimonial section */}
-        <section className="my-24">
+        <section className="my-24 ">
           <TestimonialSection />
         </section>
         {/*Trusted By section*/}
-        <section className="my-32 flex items-center flex-col">
+        <section className="my-32 flex items-center flex-col max-w-[100rem] lg:px-36">
           <h1 className="font-bold text-3xl text-center mb-2 px-4">
             Trusted By Teams Around The Globally
           </h1>

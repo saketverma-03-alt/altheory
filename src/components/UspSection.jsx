@@ -11,17 +11,16 @@ export function UsepSectin() {
   const [selected, setSelected] = useState(0);
   return (
     <>
-      <div className="mx-auto mb-2  text-4xl font-bold">
+      <div className="mx-auto mb-2  text-6xl font-extrabold">
         Product <span className="text-primary ">USP</span>
       </div>
-      <p className=" text-center text-sm sm:text-md text-muted w-full px-4">
+      <p className=" text-center text-md tracking-wider sm:text-md text-muted w-full px-4">
         With our business management software, you'll unlock the full potential
         of your business,
         <br /> streamline operations, and achieve sustainable growth. Experience
         the difference today.
       </p>
-      {/*shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]  */}
-      <div className="flex mt-24 ">
+      <div className="flex mt-24 max-w-[100rem] ">
         <div className="grid grid-cols-1 md:grid-cols-3 ">
           <div className="grid grid-cols-2 md:grid-cols-1  p-4  text-left">
             <button

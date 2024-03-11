@@ -9,8 +9,8 @@ export function AboutusSection() {
           <Image src={AboutUs} />
         </figure>
         <div>
-          <div className="mb-2 text-md font-bold ">About Us</div>
-          <h3 className="mb-6 leading-snug text-4xl font-bold">
+          <div className="mb-2 text-xl font-semibold ">About Us</div>
+          <h3 className="mb-6 text-4xl sm:text-5xl leading-loose font-extrabold">
             {" "}
             Altheory technologies & Super{" "}
             <span className="text-primary">Powerful</span>

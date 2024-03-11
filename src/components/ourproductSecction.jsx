@@ -11,9 +11,9 @@ export function OurProductSection() {
         <Image src={ProdSecImaeg} />
       </figure>
       <div className="mr-6">
-        <div className="mb-2 text-md font-bold ">Our Product</div>
+        <div className="mb-2 text-xl  font-semibold ">OUR PRODUCTS</div>
 
-        <h3 className="mb-6 leading-snug text-4xl font-bold">
+        <h3 className="mb-6 sm:leading-normal text-4xl sm:text-5xl font-extrabold">
           {" "}
           Elevate Your Lifestyle With Our Premium{" "}
           <span className="text-primary">Products</span>
