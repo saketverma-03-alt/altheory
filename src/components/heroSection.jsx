@@ -4,12 +4,12 @@ import Image from "next/image";
 export function HeroSection() {
   return (
     <>
-      <div className="grid md:grid-cols-2  text-[#303030] h-full max-w-[100rem] overflow-clip">
+      <div className="grid md:grid-cols-2  text-[#303030] h-full max-w-[1980px] overflow-x-clip ">
         <div className=" relative flex flex-col   col-span-2 lg:col-span-1 px-6 md:px-32 my-14">
         <div className="absolute z-10 bg-[#FDA55C]/50 h-64 w-64 translate-y-[-6rem]  left-12 blur-3xl opacity-80"></div>
 
           <div className="">
-            <h1 className="text-5xl sm:text-5xl mt-20 relative z-30 md:text-6xl md:whitespace-nowrap font-extrabold leading-snug md:leading-snug">
+            <h1 className="text-5xl sm:text-5xl md:mt-20 relative z-30 md:text-6xl md:whitespace-nowrap font-extrabold leading-snug md:leading-snug">
               Enhance Your <br /> Business Operations <br /> With{" "}
               <span className="text-primary">Altheory</span>
               <br />
@@ -29,8 +29,8 @@ export function HeroSection() {
             </button>
           </div>
         </div>
-        <div className="hidden lg:block">
-          <Image src={BannerImage} width={1260} height={1980} className="scale-110" />
+        <div className="hidden lg:block pt-11">
+          <Image src={BannerImage} width={1260} height={1980} className="scale-[1.25] z-0 relative" />
         </div>
       </div>
     </>

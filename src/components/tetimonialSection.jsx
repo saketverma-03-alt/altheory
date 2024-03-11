@@ -21,7 +21,7 @@ export function TestimonialSection() {
   }
   return (
     <>
-      <div className="grid md:grid-cols-2 w-full">
+      <div className="grid md:grid-cols-2 w-full lg:px-36">
         {/* info */}
         <div className="p-10 md:p-16">
           <h3 className="font-bold">TESTIMONIALS</h3>
@@ -37,7 +37,7 @@ export function TestimonialSection() {
         </div>
         {/* cards */}
         <div>
-          <div className=" p-8 flex flex-col lg:flex-row gap-4  max-w-[100rem] lg:px-36">
+          <div className=" p-8 lg:p-2 flex flex-col lg:flex-row gap-4  max-w-[1980px] ">
             {testmPageNum === 1 && (
               <>
                 <TestimonialCard key={1} />
@@ -82,7 +82,7 @@ export function TestimonialSection() {
           </div>
         </div>
       </div>
-      <TestimonialFoot />
+      {/* <TestimonialFoot /> */}
     </>
   );
 }

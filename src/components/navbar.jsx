@@ -5,7 +5,7 @@ import { Disclosure } from "@headlessui/react";
 import { Menu } from "lucide-react";
 
 const navigation = [
-  { name: "Home", href: "#home", current: false },
+  { name: "Home", href: "#", current: false },
   { name: "About", href: "#about", current: false },
   { name: "Products", href: "#products", current: false },
   { name: "Careers", href: "#careers", current: false },
@@ -26,12 +26,12 @@ export const Nav = () => {
         <>
 
           <div className="relative  w-full  flex justify-center   px-2 sm:px-6 lg:px-24 shadow-xl shadow-orange-300/20 z-[999] ">
-<div className="max-w-[100rem] w-full grid ">
+<div className="max-w-[1980px] w-full grid ">
 
             <div className="relative flex  items-center justify-center">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-primary/30 hover: focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md  text-gray-400 hover:bg-primary/30 hover: focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   <Menu />
@@ -40,7 +40,7 @@ export const Nav = () => {
               <div className="ml-10 justify-self-center self-center relative mx-auto md:mx-0 ">
     
 
-                <Image src={logo} alt="altheory logo" height={56} width={200} className="my-4 h-10 md:h-14 w-28 md:w-80" />
+                <Image src={logo} alt="altheory logo" height={56} width={200} className="my-4 h-10 md:h-14 w-28 md:w-52" />
               </div>
               <div className="flex flex-1  items-center justify-center sm:justify-start">
                 <div className="hidden  sm:block sm:mx-auto">
@@ -51,7 +51,7 @@ export const Nav = () => {
                         href={item.href}
                         className={classNames(
                           item.current ? " " : " hover:bg-primary/30 hover:",
-                          "rounded-md px-3 py-2 text-md font-medium"
+                          "rounded-md px-3 py-2 md:text-xl font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >

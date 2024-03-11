@@ -28,15 +28,18 @@ import {
 import { HeroSection } from "@/components/heroSection";
 import { AboutusSection } from "@/components/abutUsSection";
 import { OurProductSection } from "@/components/ourproductSecction";
+import { TeamSection } from "@/components/teamSection";
+import { InView } from "react-intersection-observer";
 export default function Example() {
   return (
     <>
       <Nav />
+      <div className="h-[5.2rem] bg-white z-10 relative" ></div>
       <main className="flex flex-col items-center text-secondary">
         <section className="">
           <HeroSection />
         </section>
-        <section className="max-w-6xl mt-12">
+        <section className="max-w-6xl mt-12 lg:mt-40">
           <div className="mb-10">
             <div className="text-2xl  font-semibold text-center mb-4">
               Explore Premium Features
@@ -85,20 +88,25 @@ export default function Example() {
         </section>
 
         {/* About us section */}
+        <InView as="template" onChange={(inView,entry) => console.log(inView,entry)}>
+
+        <span id="about" ></span>
+
         <section
-          id="about"
-          className="bg-[#FAFAFA] w-full flex flex-col items-center  "
+          
+          className="bg-[#FAFAFA] w-full flex flex-col my-24 items-center  "
         >
           <AboutusSection />
         </section>
         {/* our product section */}
+        <span id="products" ></span>
 
         <section
-          id="products"
-          className=" w-full grid md:grid-cols-2 p-6 md:p-20  max-w-[100rem] lg:px-36"
+          className=" w-full grid md:grid-cols-2 p-6 md:p-20 my-16 max-w-[1980px] lg:px-36"
         >
           <OurProductSection />
         </section>
+        </InView>
 
         {/* STATS section */}
         <section>
@@ -146,16 +154,18 @@ export default function Example() {
           </div>
         </section>
         {/*Product USP section*/}
-        <section className="flex  flex-col mt-28">
+        <section id="usp" className="flex  flex-col mt-28">
           <UsepSectin />
           {/*TODO: have to do some work here prob need interactive components*/}
         </section>
         {/* Testimonial section */}
-        <section className="my-24 ">
+        <section id="testimonial" className="my-24 ">
           <TestimonialSection />
         </section>
+        {/* Founders Section */}
+        <TeamSection />
         {/*Trusted By section*/}
-        <section className="my-32 flex items-center flex-col max-w-[100rem] lg:px-36">
+        <section className="my-32 flex items-center flex-col max-w-[1980px] lg:px-36">
           <h1 className="font-bold text-3xl text-center mb-2 px-4">
             Trusted By Teams Around The Globally
           </h1>
@@ -267,7 +277,7 @@ export default function Example() {
             </div>
           </div>
 
-          <div className="text-muted flex w-full my-4 px-2 text-sm">
+          <div id="contact" className="text-muted flex w-full my-4 px-2 text-sm">
             <span className="block">
               Copyright © <span className="text-secondary font-bold"></span> |
               is Proudly Powered by Altheory

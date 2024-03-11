@@ -20,9 +20,9 @@ export function UsepSectin() {
         <br /> streamline operations, and achieve sustainable growth. Experience
         the difference today.
       </p>
-      <div className="flex mt-24 max-w-[100rem] ">
+      <div className="flex mt-24 max-w-[1980px] lg:px-36">
         <div className="grid grid-cols-1 md:grid-cols-3 ">
-          <div className="grid grid-cols-2 md:grid-cols-1  p-4  text-left">
+          <div className="grid grid-cols-2 md:grid-cols-1   text-left">
             <button
               onClick={(e) => setSelected(0)}
               value={0}

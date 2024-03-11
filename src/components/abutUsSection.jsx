@@ -4,7 +4,7 @@ import Image from "next/image";
 export function AboutusSection() {
   return (
     <>
-      <div className="grid md:grid-cols-2 p-10 md:p-20 max-w-[100rem]">
+      <div className="grid md:grid-cols-2 p-10 md:p-20 max-w-[1980px] lg:px-36">
         <figure>
           <Image src={AboutUs} />
         </figure>
