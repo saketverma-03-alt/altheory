@@ -1,18 +1,10 @@
 import { Nav } from "@/components/navbar";
-import BannerImage from "@public/banner.png";
 
 import AltheoryLogoW from "@public/altheory-logo-w.svg";
 
-import Logo from "@public/logo.svg";
-import AboutUs from "@public/aboutUs.png";
 import BulgGif from "@public/gif-1.gif";
 import CostGif from "@public/gif-2.gif";
 import RocketGif from "@public/gif-3.gif";
-
-import ProdSecImaeg from "@public/product-main.png";
-import ProdSecIcon1 from "@public/prod-sec-icon-1.svg";
-import ProdSecIcon2 from "@public/prod-sec-icon-2.png";
-import ProdSecIcon3 from "@public/prod-sec-icon-3.png";
 
 import ClientImg1 from "@public/client-1.svg";
 import ClientImg2 from "@public/client-2.svg";
@@ -27,7 +19,9 @@ import { UsepSectin } from "@/components/UspSection";
 import {
   FacebookIcon,
   InstagramIcon,
+  Link2,
   Linkedin,
+  Mail,
   TwitterIcon,
   YoutubeIcon,
 } from "lucide-react";
@@ -91,12 +85,18 @@ export default function Example() {
         </section>
 
         {/* About us section */}
-        <section id="about" className="bg-[#FAFAFA] w-full flex flex-col items-center  ">
+        <section
+          id="about"
+          className="bg-[#FAFAFA] w-full flex flex-col items-center  "
+        >
           <AboutusSection />
         </section>
         {/* our product section */}
 
-        <section id="products" className=" w-full grid md:grid-cols-2 p-6 md:p-20  max-w-[100rem] lg:px-36">
+        <section
+          id="products"
+          className=" w-full grid md:grid-cols-2 p-6 md:p-20  max-w-[100rem] lg:px-36"
+        >
           <OurProductSection />
         </section>
 
@@ -247,9 +247,20 @@ export default function Example() {
                 <ul className="flex flex-col">
                   <div className="text-primary   ">Say Hellow</div>
                   <div className=" flex flex-col gap-1">
-                    <div className="w-fit">+91 9999 111 123</div>
-                    <div>+91 0111 234 567</div>
-                    <div>info@Altheory.in</div>
+                    
+                    <div>
+                      <span>
+                        {" "}
+                        <a
+                          className="flex gap-2 items-center hover:text-primary"
+                          href="mailto&#58;info&#64;altheory&#46;com"
+                        >
+                          {" "}
+                          <Mail className="h-5 w-5  " /> Contact
+                         
+                        </a>
+                      </span>
+                    </div>
                   </div>
                 </ul>
               </div>
