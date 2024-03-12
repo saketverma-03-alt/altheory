@@ -92,7 +92,7 @@ export default function Example() {
 
         <section
           
-          className="bg-[#FAFAFA] w-full flex flex-col my-24 items-center  "
+          className="bg-[#FAFAFA] w-full flex flex-col  items-center  "
         >
           <AboutusSection />
         </section>
