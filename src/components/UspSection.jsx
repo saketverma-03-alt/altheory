@@ -5,8 +5,9 @@ import Insight from "@public/usp-2.svg";
 import StreamLineInt from "@public/usp-3.svg";
 import CustmSol from "@public/usp-4.svg";
 import MainImage from "@public/usp-main.png";
-import { Lightbulb } from "lucide-react";
+// import { Lightbulb } from "lucide-react";
 import { Transition } from "@headlessui/react";
+import { Lightbulb } from "react-bootstrap-icons";
 
 export function UsepSectin() {
   const [selected, setSelected] = useState(0);

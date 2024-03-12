@@ -2,8 +2,9 @@ import Image from "next/image";
 import logo from "@public/logo.svg";
 
 import { Disclosure } from "@headlessui/react";
-import { Menu } from "lucide-react";
+
 import { useEffect } from "react";
+import { List, MenuButton } from "react-bootstrap-icons";
 
 const navigation = [
   { name: "Home", href: "#home", current: false },
@@ -36,7 +37,7 @@ export const Nav = ({activeTabId}) => {
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md  text-gray-400 hover:bg-primary/30 hover: focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
-                  <Menu />
+                  <List />
                 </Disclosure.Button>
               </div>
               <div className="ml-14 justify-self-center self-center relative mx-auto md:mx-0 ">

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 import { Transition } from "@headlessui/react";
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 
 export function TestimonialSection() {
   const [testmPageNum, setTestPageNum] = useState(1);

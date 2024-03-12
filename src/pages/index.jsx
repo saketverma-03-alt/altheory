@@ -16,24 +16,19 @@ import BGImage from "@public/Background.svg";
 import Image from "next/image";
 import { TestimonialSection } from "@/components/tetimonialSection";
 import { UsepSectin } from "@/components/UspSection";
-import {
-  Linkedin,
-  Mail,
-} from "lucide-react";
+
 import { HeroSection } from "@/components/heroSection";
 import { AboutusSection } from "@/components/abutUsSection";
 import { OurProductSection } from "@/components/ourproductSecction";
 import { TeamSection } from "@/components/teamSection";
-import { useEffect } from "react";
 import { useIntersectionObserver } from "@/hooks";
+import { Envelope, Facebook, Instagram, Linkedin, Twitter, Youtube } from "react-bootstrap-icons";
 
 
 
 export default function Example() {
   const [activeTabId,secRefs] = useIntersectionObserver()
-  // useEffect(() => {
-  //   console.log(a)
-  // },[])
+
 
   return (
     <>
@@ -224,11 +219,11 @@ export default function Example() {
                   aut! Obcaecati aperiam ducimus et optio iste libero,
                 </p>
                 <ul className="flex gap-4">
-                  <InstagramIcon className="text-white/80 hover:text-primary cursor-pointer" />
-                  <FacebookIcon className="text-white/80 hover:text-primary cursor-pointer" />
-                  <TwitterIcon className="text-white/80 hover:text-primary cursor-pointer" />
+                  <Instagram className="text-white/80 hover:text-primary cursor-pointer" />
+                  <Facebook className="text-white/80 hover:text-primary cursor-pointer" />
+                  <Twitter className="text-white/80 hover:text-primary cursor-pointer" />
                   <Linkedin className="text-white/80 hover:text-primary cursor-pointer" />
-                  <YoutubeIcon className="text-white/80 hover:text-primary cursor-pointer" />
+                  <Youtube className="text-white/80 hover:text-primary cursor-pointer" />
                 </ul>
               </div>
               <div className=" text-white/90 flex flex-col md:flex-row gap-8 flex-1">
@@ -268,7 +263,7 @@ export default function Example() {
                           href="mailto&#58;info&#64;altheory&#46;com"
                         >
                           {" "}
-                          <Mail className="h-5 w-5  " /> Contact
+                          <Envelope className="h-5 w-5  " /> Contact
                          
                         </a>
                       </span>
