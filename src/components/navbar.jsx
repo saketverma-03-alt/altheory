@@ -3,9 +3,10 @@ import logo from "@public/logo.svg";
 
 import { Disclosure } from "@headlessui/react";
 import { Menu } from "lucide-react";
+import { useEffect } from "react";
 
 const navigation = [
-  { name: "Home", href: "#", current: false },
+  { name: "Home", href: "#home", current: false },
   { name: "About", href: "#about", current: false },
   { name: "Products", href: "#products", current: false },
   { name: "Careers", href: "#careers", current: false },
@@ -16,7 +17,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export const Nav = () => {
+export const Nav = ({activeTabId}) => {
+
   return (
     <Disclosure
       as="nav"
@@ -37,7 +39,7 @@ export const Nav = () => {
                   <Menu />
                 </Disclosure.Button>
               </div>
-              <div className="ml-10 justify-self-center self-center relative mx-auto md:mx-0 ">
+              <div className="ml-14 justify-self-center self-center relative mx-auto md:mx-0 ">
     
 
                 <Image src={logo} alt="altheory logo" height={56} width={200} className="my-4 h-10 md:h-14 w-28 md:w-52" />
@@ -50,8 +52,9 @@ export const Nav = () => {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? " " : " hover:bg-primary/30 hover:",
-                          "rounded-md px-3 py-2 md:text-xl font-medium"
+                          item.current ? " " : " hover:border-b-primary border-b-4 transition-colors  hover:",
+                          ('#'+ activeTabId === item.href) ? "border-b-primary ":" border-b-transparent",
+                          " px-3 py-2 text-md lg:text-xl font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
@@ -70,8 +73,8 @@ export const Nav = () => {
                   <span className="sr-only">View notifications</span>
                 </button>
 
-                {/* Profile dropdown */}
-                <button as="div" className="bg-primary text-md btn-primary px-6 md:px-12 py-3 text-white">
+
+                <button as="div" className="bg-primary text-md btn-primary px-6  lg:px-12 py-3 text-white">
                   Get Started
                 </button>
               </div>

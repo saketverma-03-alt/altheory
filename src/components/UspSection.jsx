@@ -6,23 +6,24 @@ import StreamLineInt from "@public/usp-3.svg";
 import CustmSol from "@public/usp-4.svg";
 import MainImage from "@public/usp-main.png";
 import { Lightbulb } from "lucide-react";
+import { Transition } from "@headlessui/react";
 
 export function UsepSectin() {
   const [selected, setSelected] = useState(0);
   return (
     <>
-      <div className="mx-auto mb-2  text-6xl font-extrabold">
+      <div className="mx-auto mb-2  text-6xl font-extrabold px-6">
         Product <span className="text-primary ">USP</span>
       </div>
-      <p className=" text-center text-md tracking-wider sm:text-md text-muted w-full px-4">
+      <p className=" md:text-center text-md tracking-wider sm:text-md text-muted w-full px-6">
         With our business management software, you'll unlock the full potential
         of your business,
         <br /> streamline operations, and achieve sustainable growth. Experience
         the difference today.
       </p>
       <div className="flex mt-24 max-w-[1980px] lg:px-36">
-        <div className="grid grid-cols-1 md:grid-cols-3 ">
-          <div className="grid grid-cols-2 md:grid-cols-1   text-left">
+        <div className="grid grid-cols-1 place-items-center md:grid-cols-3 ">
+          <div className="grid grid-cols-2 md:grid-cols-1 w-fit h-fit   text-left">
             <button
               onClick={(e) => setSelected(0)}
               value={0}
@@ -81,7 +82,7 @@ export function UsepSectin() {
               </span>
             </button>
           </div>
-          <div className="grid md:col-span-2 grid-cols-1 md:grid-cols-2  p-6 gap-20">
+          <div className=" p-6 col-span-2 ">
             {selected === 0 && <Usp1 />}
             {selected === 1 && <Usp1 />}
             {selected === 2 && <Usp1 />}
@@ -96,6 +97,19 @@ export function UsepSectin() {
 const Usp1 = () => {
   return (
     <>
+    <Transition
+               appear={true}
+               show={true}
+               as="div"
+               className={'grid lg:grid-cols-2 gap-14 '}
+               enter="transition-all duration-500"
+               enterFrom="opacity-0 scale-90 "
+               enterTo="opacity-100 "
+               leave="transition-opacity duration-200"
+               leaveFrom="opacity-100 "
+               leaveTo="opacity-0 scale-90  "
+    >
+
       <Image src={MainImage} className="rounded-xl  object-cover md:mr-20" />
       <div className="flex justify-center flex-col">
         <figure
@@ -117,6 +131,8 @@ const Usp1 = () => {
           Explor Now
         </button>
       </div>
+    </Transition>
+
     </>
   );
 };

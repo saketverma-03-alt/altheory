@@ -4,7 +4,7 @@ import Image from "next/image";
 export function HeroSection() {
   return (
     <>
-      <div className="grid md:grid-cols-2  text-[#303030] h-full max-w-[1980px] overflow-x-clip ">
+      <div className="grid md:grid-cols-2  text-[#303030] h-full max-w-[1980px] lg:overflow-x-clip ">
         <div className=" relative flex flex-col   col-span-2 lg:col-span-1 px-6 md:px-32 my-14">
         <div className="absolute z-10 bg-[#FDA55C]/50 h-64 w-64 translate-y-[-6rem]  left-12 blur-3xl opacity-80"></div>
 

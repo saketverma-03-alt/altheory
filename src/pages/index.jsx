@@ -2,9 +2,9 @@ import { Nav } from "@/components/navbar";
 
 import AltheoryLogoW from "@public/altheory-logo-w.svg";
 
-import BulgGif from "@public/gif-1.gif";
-import CostGif from "@public/gif-2.gif";
-import RocketGif from "@public/gif-3.gif";
+import BulgGif from "@public/bulb.gif";
+import CostGif from "@public/money.gif";
+import RocketGif from "@public/rocket.gif";
 
 import ClientImg1 from "@public/client-1.svg";
 import ClientImg2 from "@public/client-2.svg";
@@ -17,29 +17,33 @@ import Image from "next/image";
 import { TestimonialSection } from "@/components/tetimonialSection";
 import { UsepSectin } from "@/components/UspSection";
 import {
-  FacebookIcon,
-  InstagramIcon,
-  Link2,
   Linkedin,
   Mail,
-  TwitterIcon,
-  YoutubeIcon,
 } from "lucide-react";
 import { HeroSection } from "@/components/heroSection";
 import { AboutusSection } from "@/components/abutUsSection";
 import { OurProductSection } from "@/components/ourproductSecction";
 import { TeamSection } from "@/components/teamSection";
-import { InView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { useIntersectionObserver } from "@/hooks";
+
+
+
 export default function Example() {
+  const [activeTabId,secRefs] = useIntersectionObserver()
+  // useEffect(() => {
+  //   console.log(a)
+  // },[])
+
   return (
     <>
-      <Nav />
+      <Nav activeTabId={activeTabId} />
       <div className="h-[5.2rem] bg-white z-10 relative" ></div>
       <main className="flex flex-col items-center text-secondary">
-        <section className="">
+        <section className="" id="home" ref={secRefs.home} >
           <HeroSection />
         </section>
-        <section className="max-w-6xl mt-12 lg:mt-40">
+        <section  className="max-w-6xl mt-12 lg:mt-40">
           <div className="mb-10">
             <div className="text-2xl  font-semibold text-center mb-4">
               Explore Premium Features
@@ -88,9 +92,8 @@ export default function Example() {
         </section>
 
         {/* About us section */}
-        <InView as="template" onChange={(inView,entry) => console.log(inView,entry)}>
 
-        <span id="about" ></span>
+        <span id="about" ref={secRefs.about} ></span>
 
         <section
           
@@ -99,14 +102,13 @@ export default function Example() {
           <AboutusSection />
         </section>
         {/* our product section */}
-        <span id="products" ></span>
+        <span id="products" ref={secRefs.product} ></span>
 
         <section
           className=" w-full grid md:grid-cols-2 p-6 md:p-20 my-16 max-w-[1980px] lg:px-36"
         >
           <OurProductSection />
         </section>
-        </InView>
 
         {/* STATS section */}
         <section>
@@ -154,7 +156,7 @@ export default function Example() {
           </div>
         </section>
         {/*Product USP section*/}
-        <section id="usp" className="flex  flex-col mt-28">
+        <section id="usp" className="flex bg-[#E8F5FF] py-16  flex-col mt-28">
           <UsepSectin />
           {/*TODO: have to do some work here prob need interactive components*/}
         </section>
@@ -233,16 +235,16 @@ export default function Example() {
                 <ul className="flex flex-col">
                   <div className="text-primary ">Menu</div>
                   <div className=" flex md:flex-col gap-2 flex-wrap md:gap-1">
-                    <a href="">Home</a>
-                    <a href="">About</a>
-                    <a href="">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#products">
                       Product{" "}
                       <span className="inline-block bg-green-500 text-xs px-1 rounded-full">
                         OFFER
                       </span>{" "}
                     </a>
-                    <a href="">Career</a>
-                    <a href="">Contact</a>
+                    <a href="career">Career</a>
+                    <a href="contact">Contact</a>
                   </div>
                 </ul>
                 <ul className="flex flex-col">
@@ -277,7 +279,7 @@ export default function Example() {
             </div>
           </div>
 
-          <div id="contact" className="text-muted flex w-full my-4 px-2 text-sm">
+          <div id="contact" ref={secRefs.contact} className="text-muted flex w-full my-4 px-2 text-sm">
             <span className="block">
               Copyright © <span className="text-secondary font-bold"></span> |
               is Proudly Powered by Altheory
