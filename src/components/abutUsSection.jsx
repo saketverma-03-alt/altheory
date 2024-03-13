@@ -6,7 +6,7 @@ export function AboutusSection() {
     <>
       <div className="grid md:grid-cols-2 p-10 md:p-20 max-w-[1980px] lg:px-36">
         <figure>
-          <Image src={AboutUs} />
+          <Image  src={AboutUs} alt="about us section image"/>
         </figure>
         <div>
           <div className="mb-2 text-xl font-semibold ">About Us</div>

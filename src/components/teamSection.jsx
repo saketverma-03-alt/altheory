@@ -68,12 +68,14 @@ export function TeamSection() {
 
             <figure className="p-4 max-w-3xl ">
               <Image
+              alt="Ravi Sankar Founder"
                 src={FounderImage}
                 width={600}
                 height={700}
                 className="z-[10] relative"
               />
               <Image
+                alt="vector graphic"
                 src={waveImage}
                 className="absolute bottom-[-30px] right-60 z-20 "
               />
@@ -136,26 +138,12 @@ export function TeamSection() {
           {teamMembers.map((item) => {
             return (
               <>
-                {/* <div className="border bg-slate-50 p-2 md:p-4 flex transition-all duration-500 ease-in hover:rounded-t-full flex-col gap-2">
-                  <figure
-                    className={`${item.css} flex-1 bg-gradient-to-t pt-2 md:pt-6 px-4 transition-all duration-500 ease-in hover:rounded-t-full  flex justify-center `}
-                  >
-                    <Image
-                      src={item.image}
-                      className=" w-full h-full object-cover"
-                    />
-                  </figure>
-                  <p className="w-full text-center">
-                    <span className="text-md md:text-2xl">{item.name}</span>
-                    <br />
-                    <span className="text-sm md:text-md  opacity-60">{item.des}</span>
-                  </p>{" "}
-                </div> */}
+         
 
           <div className="border md:p-4 flex flex-col gap-2 p-2 group transition-all duration-500 ease-in-out hover:rounded-t-full">
-          <figure className={`${item.css}  flex-1 group-hover:rounded-t-full relative transition-all duration-500 ease-in-out bg-gradient-to-t pt-2 md:pt-6 `}>
-              <div className="px-4">
-                <Image src={item.image} className="w-full " />
+          <figure className={`${item.css}   group-hover:rounded-t-full relative transition-all duration-500 ease-in-out bg-gradient-to-t pt-2 md:pt-6 `}>
+              <div className="">
+                <Image alt={item.name + 'team member image'} src={item.image} className="w-full h-full object-cover " />
               </div>
 
               <div className="absolute bottom-0 bg-gradient-to-t text-white gap-4 text-xl group-hover:text-3xl pb-4 from-slate-500 group-hover:opacity-100 transition-all flex via-transparent h-1/2 w-full opacity-0 items-end justify-center">

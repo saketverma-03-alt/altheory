@@ -30,7 +30,7 @@ export function HeroSection() {
           </div>
         </div>
         <div className="hidden lg:block pt-11">
-          <Image src={BannerImage} width={1260} height={1980} className="scale-[1.25] z-0 relative" />
+          <Image alt="hero section image" src={BannerImage} width={1260} height={1980} alt="" className="scale-[1.25] z-0 relative" />
         </div>
       </div>
     </>

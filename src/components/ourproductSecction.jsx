@@ -11,7 +11,7 @@ export function OurProductSection() {
   return (
     <>
       <figure className="md:hidden ">
-        <Image src={ProdSecImaeg} />
+        <Image alt="product marketing image" src={ProdSecImaeg} />
       </figure>
       <div className="mr-6">
         <div className="mb-2 text-xl  font-semibold ">OUR PRODUCTS</div>
@@ -24,7 +24,7 @@ export function OurProductSection() {
         <div className="space-y-2  max-w-lg mb-8 ">
           <div onClick={() => setSelectedIdx(1)} className="flex gap-4 transition-color duration-200  hover:bg-primary group items-center p-4 rounded-xl shadow-sm">
             <figure className="bg-gray-200 rounded-full p-3 h-fit w-fit">
-              <Image src={ProdSecIcon1} />
+              <Image alt="icon" src={ProdSecIcon1} />
             </figure>
             <div className="flex-1 group-hover:text-white">
               <h3 className="text-2xl font-semibold ">Onbordme</h3>
@@ -36,7 +36,7 @@ export function OurProductSection() {
           </div>
           <div  onClick={() => setSelectedIdx(2)}className="flex gap-4 transition-color duration-200 hover:bg-primary group items-center p-4 rounded-xl shadow-sm">
             <figure className="bg-gray-200 rounded-full p-3 h-fit w-fit">
-              <Image src={ProdSecIcon2} />
+              <Image alt="icon" src={ProdSecIcon2} />
             </figure>
             <div className="flex-1 group-hover:text-white">
               <h3 className="text-2xl font-semibold ">Cluster HRMS</h3>
@@ -48,7 +48,7 @@ export function OurProductSection() {
           </div>
           <div  onClick={() => setSelectedIdx(3)}className="flex gap-4 transition-color duration-200 hover:bg-primary group items-center p-4 rounded-xl shadow-sm">
             <figure className="bg-gray-200 rounded-full p-3 h-fit w-fit">
-              <Image src={ProdSecIcon3} />
+              <Image alt="icon" src={ProdSecIcon3} />
             </figure>
             <div className="flex-1">
               <h3 className="text-2xl font-semibold group-hover:text-white ">Facility Management</h3>
@@ -77,7 +77,7 @@ export function OurProductSection() {
                 leaveTo="opacity-0 scale-90  "
         >
 
-        <Image src={ProdSecImaeg} />
+        <Image alt="product image" src={ProdSecImaeg} />
         </Transition>
 }
  { selectedIdx === 2   &&    <Transition 
@@ -92,7 +92,7 @@ export function OurProductSection() {
                 leaveTo="opacity-0   "
         >
 
-        <Image src={ProdSecImaeg} />
+        <Image alt="product image" src={ProdSecImaeg} />
         </Transition>
  }
   { selectedIdx === 3   &&    <Transition 
@@ -107,7 +107,7 @@ export function OurProductSection() {
                 leaveTo="opacity-0   "
         >
 
-        <Image src={ProdSecImaeg} />
+        <Image alt="product image" src={ProdSecImaeg} />
         </Transition>
  }
     

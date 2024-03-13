@@ -111,13 +111,13 @@ const Usp1 = () => {
                leaveTo="opacity-0 scale-90  "
     >
 
-      <Image src={MainImage} className="rounded-xl  object-cover md:mr-20" />
+      <Image alt="product usp" src={MainImage} className="rounded-xl  object-cover md:mr-20" />
       <div className="flex justify-center flex-col">
         <figure
           className="rounded-full shadow-bal grid place-items-center p-6    border-gray-200 h-20 w-20 md:h-24 md:w-24
         "
         >
-          <Image src={CustmSol} className="h-full w-full" />
+          <Image alt="icon" src={CustmSol} className="h-full w-full" />
         </figure>
         <p
           className="mt-8 mb-8 max-w-64 text-muted

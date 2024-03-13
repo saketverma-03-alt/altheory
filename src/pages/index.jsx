@@ -52,7 +52,7 @@ export default function Example() {
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 my-8">
             <div className="flex p-4 flex-col md:flex-row items-center">
               <figure className="mr-6 w-20 h-20">
-                <Image src={BulgGif} width={80} height={80} />
+                <Image alt="icon" src={BulgGif} width={80} height={80} />
               </figure>
               <div className="flex-1 space-y-2 text-center md:text-left">
                 <div className="font-[500] text-xl">Elevate Productivity </div>
@@ -63,7 +63,7 @@ export default function Example() {
             </div>
             <div className="flex p-4 flex-col md:flex-row items-center">
               <figure className="mr-6 w-20 h-20">
-                <Image src={CostGif} />
+                <Image alt="icon" src={CostGif} />
               </figure>
               <div className="flex-1 space-y-2 text-center md:text-left ">
                 <div className="font-[500] text-xl">Transforming Business Dynamics </div>
@@ -74,7 +74,7 @@ export default function Example() {
             </div>
             <div className="flex col-span-2 md:col-span-1 p-4 flex-col md:flex-row items-center">
               <figure className="mr-6 w-20 h-20">
-                <Image src={RocketGif} />
+                <Image alt="icon" src={RocketGif} />
               </figure>
               <div className="flex-1 space-y-2  text-center md:text-left">
                 <div className="font-[500] text-xl">Transforming Operations </div>
@@ -171,10 +171,10 @@ export default function Example() {
             Brought To You Transform The Way You Work.
           </p>
           <div className="grid lg:flex grid-cols-2 p-4 gap-16 mt-16 ">
-            <Image src={ClientImg1} />
-            <Image src={ClientImg2} />
-            <Image src={ClientImg3} />
-            <Image src={ClientImg4} />
+            <Image alt="onboardme logo" src={ClientImg1} />
+            <Image alt="client.sport logo" src={ClientImg2} />
+            <Image alt="Lorem logo" src={ClientImg3} />
+            <Image alt="Berry logo" src={ClientImg4} />
           </div>
         </section>
         <footer className=" md:px-16 w-full max-w-7xl mt-24">
@@ -211,7 +211,7 @@ export default function Example() {
           <div className="bg-[#4A4A4A] relative w-full h-full rounded-xl px-8 md:px-16 pb-16">
             <div className="flex flex-col md:flex-row pt-40 gap-8 ">
               <div className="md:border-r border-gray-500 pr-8">
-                <Image src={AltheoryLogoW} />
+                <Image alt="altheory logo" src={AltheoryLogoW} />
                 <p className="max-w-sm text-white/70 my-4 text-sm ">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Asperiores sequi veritatis rerum omnis cum quidem, tempora
