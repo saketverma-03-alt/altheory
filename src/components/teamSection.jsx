@@ -55,11 +55,11 @@ export function TeamSection() {
         <div className="grid md:grid-cols-2 px-8 gap-16 max-w-[1980px] lg:px-36 w-full ">
           <div className="relative flex flex-col w-full">
             <h2 className="relative z-[2]">
-              <span className="block ml-6 mb-[-1.5rem] text-4xl opacity-70">
+              <span className="block ml-6 mb-[-1.5rem] text-3xl opacity-70">
                 Meet
               </span>
               <br />
-              <span className=" font-extrabold text-7xl">Our Founder</span>
+              <span className=" font-extrabold text-5xl">Our Founder</span>
             </h2>
             <Image
               src={fillImage}
@@ -70,7 +70,7 @@ export function TeamSection() {
               <Image
               alt="Ravi Sankar Founder"
                 src={FounderImage}
-                width={600}
+                width={400}
                 height={700}
                 className="z-[10] relative"
               />
@@ -82,8 +82,8 @@ export function TeamSection() {
             </figure>
           </div>
           <div className="flex justify-center flex-col">
-            <p className="font-bold text-7xl">Ravi Sankar</p>
-            <p className="text-3xl opacity-80 mt-2">CEO & Founder</p>
+            <p className="font-bold text-4xl">Ravi Sankar</p>
+            <p className="text-2xl opacity-80 mt-2">CEO & Founder</p>
 
             <p className="mb-6 text-2xl mt-8 ">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
@@ -140,13 +140,13 @@ export function TeamSection() {
               <>
          
 
-          <div className="border md:p-4 flex flex-col gap-2 p-2 group transition-all duration-500 ease-in-out hover:rounded-t-full">
-          <figure className={`${item.css}   group-hover:rounded-t-full relative transition-all duration-500 ease-in-out bg-gradient-to-t pt-2 md:pt-6 `}>
+          <div className="border md:p-4 flex flex-col gap-2 p-2 group duration-400 transition-all  delay-0 hover:rounded-none rounded-t-full  hover:shadow-xl  ">
+          <figure className={`${item.css}   group-hover:srounded-t-full relative ease-in-out duration-400  transition-all bg-gradient-to-t pt-2 md:pt-6 group-hover:rounded-none rounded-t-full `}>
               <div className="">
-                <Image alt={item.name + 'team member image'} src={item.image} className="w-full h-full object-cover " />
+                <Image alt={item.name + 'team member image'} src={item.image} className="w-full transition-all duration-500 group-hover:scale-100 h-full object-cover " />
               </div>
 
-              <div className="absolute bottom-0 bg-gradient-to-t text-white gap-4 text-xl group-hover:text-3xl pb-4 from-slate-500 group-hover:opacity-100 transition-all flex via-transparent h-1/2 w-full opacity-0 items-end justify-center">
+              <div className="absolute bottom-0  bg-gradient-to-t text-white gap-4 text-xl group-hover:text-3xl pb-4 from-slate-500 group-hover:opacity-100 transition-all flex via-transparent h-1/2 w-full opacity-0 items-end justify-center">
                 <a href="#home" className="block hover:text-primary">
                   <Instagram />
                 </a>

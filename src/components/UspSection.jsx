@@ -22,9 +22,9 @@ export function UsepSectin() {
         <br /> streamline operations, and achieve sustainable growth. Experience
         the difference today.
       </p>
-      <div className="flex mt-24 max-w-[1980px] lg:px-36">
-        <div className="grid grid-cols-1 place-items-center md:grid-cols-3 ">
-          <div className="grid grid-cols-2 md:grid-cols-1 w-fit h-fit   text-left">
+      <div className="flex mt-24 max-w-[1980px] lg:px-36 justify-center items-center">
+        <div className="grid grid-cols-1 place-items-center lg:grid-cols-3 p-4 ">
+          <div className="grid grid-cols-2 lg:grid-cols-1 w-fit h-fit   text-left">
             <button
               onClick={(e) => setSelected(0)}
               value={0}
@@ -102,7 +102,7 @@ const Usp1 = () => {
                appear={true}
                show={true}
                as="div"
-               className={'grid lg:grid-cols-2 gap-14 '}
+               className={'grid lg:grid-cols-2 gap-14  w-full'}
                enter="transition-all duration-500"
                enterFrom="opacity-0 scale-90 "
                enterTo="opacity-100 "
@@ -111,7 +111,7 @@ const Usp1 = () => {
                leaveTo="opacity-0 scale-90  "
     >
 
-      <Image alt="product usp" src={MainImage} className="rounded-xl  object-cover md:mr-20" />
+      <Image alt="product usp" src={MainImage} className="rounded-xl  object-cover lg:mr-20" />
       <div className="flex justify-center flex-col">
         <figure
           className="rounded-full shadow-bal grid place-items-center p-6    border-gray-200 h-20 w-20 md:h-24 md:w-24
