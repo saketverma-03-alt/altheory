@@ -10,6 +10,12 @@ import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Twitter } from "react-bootstrap-icons";
 
 const teamMembers = [
+    {
+    name: "Debashish",
+    des: "co-founder",
+    css: " bg-gradient-to-r  from-red-800 to-red-600",
+    image: AtulSoni,
+  },
   {
     name: "Atul Soni",
     des: "Product Manager",
@@ -124,13 +130,35 @@ export function TeamSection() {
           </p>
         </div>
         <div className="grid relative grid-cols-2 lg:grid-cols-3 col-span-2 gap-4 text-black">
-          <div className="border md:p-4 flex flex-col gap-2 p-2">
-            <figure className="flex-1 relative bg-gradient-to-r pt-2 md:pt-6  from-red-800 to-red-600">
+         
+
+          {/* team members frame */}
+          {teamMembers.map((item) => {
+            return (
+              <>
+                {/* <div className="border bg-slate-50 p-2 md:p-4 flex transition-all duration-500 ease-in hover:rounded-t-full flex-col gap-2">
+                  <figure
+                    className={`${item.css} flex-1 bg-gradient-to-t pt-2 md:pt-6 px-4 transition-all duration-500 ease-in hover:rounded-t-full  flex justify-center `}
+                  >
+                    <Image
+                      src={item.image}
+                      className=" w-full h-full object-cover"
+                    />
+                  </figure>
+                  <p className="w-full text-center">
+                    <span className="text-md md:text-2xl">{item.name}</span>
+                    <br />
+                    <span className="text-sm md:text-md  opacity-60">{item.des}</span>
+                  </p>{" "}
+                </div> */}
+
+          <div className="border md:p-4 flex flex-col gap-2 p-2 group transition-all duration-500 ease-in-out hover:rounded-t-full">
+          <figure className={`${item.css}  flex-1 group-hover:rounded-t-full relative transition-all duration-500 ease-in-out bg-gradient-to-t pt-2 md:pt-6 `}>
               <div className="px-4">
-                <Image src={AtulSoni} className="w-full " />
+                <Image src={item.image} className="w-full " />
               </div>
 
-              <div className="absolute bottom-0 bg-gradient-to-t text-white gap-4 text-xl pb-4 from-slate-500  via-transparent h-1/2 w-full flex items-end justify-center">
+              <div className="absolute bottom-0 bg-gradient-to-t text-white gap-4 text-xl group-hover:text-3xl pb-4 from-slate-500 group-hover:opacity-100 transition-all flex via-transparent h-1/2 w-full opacity-0 items-end justify-center">
                 <a href="#home" className="block hover:text-primary">
                   <Instagram />
                 </a>
@@ -147,30 +175,10 @@ export function TeamSection() {
             </figure>
 
             <p className="w-full text-center">
-              <span className="text-md md:text-2xl">Debashish</span> <br />
-              <span className="text-sm md:text-md opacity-70">co-founder</span>
+              <span className="text-md md:text-2xl">{item.name}</span> <br />
+              <span className="text-sm md:text-md opacity-70">{item.des}</span>
             </p>
           </div>
-
-          {/* team members frame */}
-          {teamMembers.map((item) => {
-            return (
-              <>
-                <div className="border bg-slate-50 p-2 md:p-4 flex rounded-t-full flex-col gap-2">
-                  <figure
-                    className={`${item.css} flex-1 bg-gradient-to-t pt-2 md:pt-6 px-4  rounded-t-full  flex justify-center `}
-                  >
-                    <Image
-                      src={item.image}
-                      className=" w-full h-full object-cover"
-                    />
-                  </figure>
-                  <p className="w-full text-center">
-                    <span className="text-md md:text-2xl">{item.name}</span>
-                    <br />
-                    <span className="text-sm md:text-md  opacity-60">{item.des}</span>
-                  </p>{" "}
-                </div>
               </>
             );
           })}
