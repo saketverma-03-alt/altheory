@@ -38,10 +38,10 @@ export default function Example() {
         <section className="" id="home" ref={secRefs.home} >
           <HeroSection />
         </section>
-        <section  className="max-w-6xl mt-12 lg:mt-40">
+        <section  className="max-w-[1980px] md:mx-36 mt-12 lg:mt-40">
           <div className="mb-10">
             <div className="text-2xl  font-semibold text-center mb-4">
-              Explore Premium Features
+            Harness the Power of Business Management Software for Growth
             </div>
             <p className="mx-auto px-10 text-center max-w-2xl leading-[26px]  text-muted ">
               Unique and powerful suite of software to run your entire business,
@@ -55,9 +55,9 @@ export default function Example() {
                 <Image src={BulgGif} width={80} height={80} />
               </figure>
               <div className="flex-1 space-y-2 text-center md:text-left">
-                <div className="font-[500] text-xl">Grow your business</div>
+                <div className="font-[500] text-xl">Elevate Productivity </div>
                 <p className="text-muted">
-                  We also help our clients with social media strategy
+                Streamlining processes and leveraging innovative tools to maximize efficiency and output
                 </p>
               </div>
             </div>
@@ -66,9 +66,9 @@ export default function Example() {
                 <Image src={CostGif} />
               </figure>
               <div className="flex-1 space-y-2 text-center md:text-left ">
-                <div className="font-[500] text-xl">Cost saving ideas</div>
+                <div className="font-[500] text-xl">Transforming Business Dynamics </div>
                 <p className="text-muted">
-                  We believe in challenges and so we have mode challenges.
+                Revolutionizing technological landscapes to redefine business strategies and operations
                 </p>
               </div>
             </div>
@@ -77,10 +77,9 @@ export default function Example() {
                 <Image src={RocketGif} />
               </figure>
               <div className="flex-1 space-y-2  text-center md:text-left">
-                <div className="font-[500] text-xl">Boost performance</div>
+                <div className="font-[500] text-xl">Transforming Operations </div>
                 <p className="text-muted">
-                  We deliver email marketing campaigns to your audience.
-                </p>
+                Optimizing processes and workflows to enhance efficiency and productivity                </p>
               </div>
             </div>
           </div>
@@ -163,9 +162,9 @@ export default function Example() {
         <TeamSection />
         {/*Trusted By section*/}
         <section className="my-32 flex items-center flex-col max-w-[1980px] lg:px-36">
-          <h1 className="font-bold text-3xl text-center mb-2 px-4">
+          <h2 className="font-bold text-3xl text-center mb-2 px-4">
             Trusted By Teams Around The Globally
-          </h1>
+          </h2>
           <p className="text-muted text-center text-sm px-6">
             Unique And Powerful Suite Of Software To Run Your Entire Business,
             <br />
