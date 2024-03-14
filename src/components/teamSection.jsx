@@ -10,7 +10,7 @@ import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Twitter } from "react-bootstrap-icons";
 
 const teamMembers = [
-    {
+  {
     name: "Debashish",
     des: "co-founder",
     css: " bg-gradient-to-r  from-red-800 to-red-600",
@@ -68,7 +68,7 @@ export function TeamSection() {
 
             <figure className="p-4 max-w-3xl ">
               <Image
-              alt="Ravi Sankar Founder"
+                alt="Ravi Sankar Founder"
                 src={FounderImage}
                 width={400}
                 height={700}
@@ -85,24 +85,24 @@ export function TeamSection() {
             <p className="font-bold text-4xl">Ravi Sankar</p>
             <p className="text-2xl opacity-80 mt-2">CEO & Founder</p>
 
-            <p className="mb-6 text-2xl mt-8 ">
+            <p className="mb-6 text-xl mt-4 ">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
               tenetur asperiores hic sunt earum dolorum vitae facilis cum
               quaerat aut quibusdam deleniti, nam quo amet officia saepe. In,
               molestias ipsam!
             </p>
 
-            <p className=" text-2xl">
+            <p className=" text-xl">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
               tenetur asperiores hic sunt earum dolorum vitae facilis cum
               quaerat aut quibusdam deleniti, nam quo amet officia saepe. In,
               molestias ipsam!
             </p>
-            <figure className="mt-16  hover:text-primary rounded-2xl hover:bg-white w-fit">
+            <figure className="mt-16  hover:text-primary rounded-xl hover:bg-white w-fit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="72"
-                height="72"
+                width="54"
+                height="54"
                 fill="currentColor"
                 class="bi bi-linkedin"
                 viewBox="0 0 16 16"
@@ -132,41 +132,46 @@ export function TeamSection() {
           </p>
         </div>
         <div className="grid relative grid-cols-2 lg:grid-cols-3 col-span-2 gap-4 text-black">
-         
-
           {/* team members frame */}
           {teamMembers.map((item) => {
             return (
               <>
-         
+                <div className="border  md:p-4 flex flex-col gap-2 p-2 group duration-400 transition-all  delay-0 hover:rounded-none rounded-t-full  hover:shadow-xl  ">
+                  <figure
+                    className={`${item.css} h-72  flex justify-end items-end  group-hover:srounded-t-full relative ease-in-out duration-400  transition-all bg-gradient-to-t pt-2 md:pt-6 group-hover:rounded-none rounded-t-full `}
+                  >
+                    {/* <div className=""> */}
+                    <Image
+                      alt={item.name + "team member image"}
+                      src={item.image}
+                      className="w-full  transition-all max-h-60 duration-500 group-hover:scale-100  object-contain "
+                    />
+                    {/* </div> */}
 
-          <div className="border md:p-4 flex flex-col gap-2 p-2 group duration-400 transition-all  delay-0 hover:rounded-none rounded-t-full  hover:shadow-xl  ">
-          <figure className={`${item.css}   group-hover:srounded-t-full relative ease-in-out duration-400  transition-all bg-gradient-to-t pt-2 md:pt-6 group-hover:rounded-none rounded-t-full `}>
-              <div className="">
-                <Image alt={item.name + 'team member image'} src={item.image} className="w-full transition-all duration-500 group-hover:scale-100 h-full object-cover " />
-              </div>
+                    <div className="absolute bottom-0  bg-gradient-to-t text-white gap-4 text-xl group-hover:text-3xl pb-4 from-slate-500 group-hover:opacity-100 transition-all flex via-transparent h-1/2 w-full opacity-0 items-end justify-center">
+                      <a href="#home" className="block hover:text-primary">
+                        <Instagram />
+                      </a>
+                      <a href="#home" className="block hover:text-primary">
+                        <Facebook />
+                      </a>
+                      <a href="#home" className="block hover:text-primary">
+                        <Twitter />
+                      </a>
+                      <a href="#home" className="block hover:text-primary">
+                        <Linkedin />
+                      </a>
+                    </div>
+                  </figure>
 
-              <div className="absolute bottom-0  bg-gradient-to-t text-white gap-4 text-xl group-hover:text-3xl pb-4 from-slate-500 group-hover:opacity-100 transition-all flex via-transparent h-1/2 w-full opacity-0 items-end justify-center">
-                <a href="#home" className="block hover:text-primary">
-                  <Instagram />
-                </a>
-                <a href="#home" className="block hover:text-primary">
-                  <Facebook />
-                </a>
-                <a href="#home" className="block hover:text-primary">
-                  <Twitter />
-                </a>
-                <a href="#home" className="block hover:text-primary">
-                  <Linkedin />
-                </a>
-              </div>
-            </figure>
-
-            <p className="w-full text-center">
-              <span className="text-md md:text-2xl">{item.name}</span> <br />
-              <span className="text-sm md:text-md opacity-70">{item.des}</span>
-            </p>
-          </div>
+                  <p className="w-full text-center">
+                    <span className="text-md md:text-2xl">{item.name}</span>{" "}
+                    <br />
+                    <span className="text-sm md:text-md opacity-70">
+                      {item.des}
+                    </span>
+                  </p>
+                </div>
               </>
             );
           })}

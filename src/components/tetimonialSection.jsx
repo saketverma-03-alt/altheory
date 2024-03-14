@@ -21,7 +21,7 @@ export function TestimonialSection() {
   }
   return (
     <>
-      <div className="grid md:grid-cols-2 w-full lg:px-36">
+      <div className="grid md:grid-cols-2 w-full ">
         {/* info */}
         <div className="p-10 md:p-16">
           <h3 className="font-bold">TESTIMONIALS</h3>

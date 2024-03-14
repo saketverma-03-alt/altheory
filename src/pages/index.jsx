@@ -22,26 +22,33 @@ import { AboutusSection } from "@/components/abutUsSection";
 import { OurProductSection } from "@/components/ourproductSecction";
 import { TeamSection } from "@/components/teamSection";
 import { useIntersectionObserver } from "@/hooks";
-import { Envelope, Facebook, Instagram, Linkedin, Twitter, Youtube } from "react-bootstrap-icons";
-
-
+import {
+  Envelope,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Youtube,
+} from "react-bootstrap-icons";
+import CountUp from "react-countup";
+import StatsSection from "@/components/statsSec";
+import { motion } from "framer-motion";
 
 export default function Example() {
-  const [activeTabId,secRefs] = useIntersectionObserver()
-
+  const [activeTabId, secRefs] = useIntersectionObserver();
 
   return (
     <>
       <Nav activeTabId={activeTabId} />
-      <div className="h-[5.2rem] bg-white z-10 relative" ></div>
-      <main className="flex flex-col items-center text-secondary">
-        <section className="" id="home" ref={secRefs.home} >
+      <div className="h-[5.2rem] bg-white z-10 relative"></div>
+      <main className="flex flex-col items-center text-secondary overflow-x-clip">
+        <section className="" id="home" ref={secRefs.home}>
           <HeroSection />
         </section>
-        <section  className="max-w-[1980px] md:mx-36 mt-12 lg:mt-40">
+        <section className="max-w-[1980px] md:mx-36 mt-12 lg:mt-40">
           <div className="mb-10">
             <div className="text-2xl  font-semibold text-center mb-4">
-            Harness the Power of Business Management Software for Growth
+              Harness the Power of Business Management Software for Growth
             </div>
             <p className="mx-auto px-10 text-center max-w-2xl leading-[26px]  text-muted ">
               Unique and powerful suite of software to run your entire business,
@@ -57,7 +64,8 @@ export default function Example() {
               <div className="flex-1 space-y-2 text-center md:text-left">
                 <div className="font-[500] text-xl">Elevate Productivity </div>
                 <p className="text-muted">
-                Streamlining processes and leveraging innovative tools to maximize efficiency and output
+                  Streamlining processes and leveraging innovative tools to
+                  maximize efficiency and output
                 </p>
               </div>
             </div>
@@ -66,9 +74,12 @@ export default function Example() {
                 <Image alt="icon" src={CostGif} />
               </figure>
               <div className="flex-1 space-y-2 text-center md:text-left ">
-                <div className="font-[500] text-xl">Transforming Business Dynamics </div>
+                <div className="font-[500] text-xl">
+                  Transforming Business Dynamics{" "}
+                </div>
                 <p className="text-muted">
-                Revolutionizing technological landscapes to redefine business strategies and operations
+                  Revolutionizing technological landscapes to redefine business
+                  strategies and operations
                 </p>
               </div>
             </div>
@@ -77,9 +88,13 @@ export default function Example() {
                 <Image alt="icon" src={RocketGif} />
               </figure>
               <div className="flex-1 space-y-2  text-center md:text-left">
-                <div className="font-[500] text-xl">Transforming Operations </div>
+                <div className="font-[500] text-xl">
+                  Transforming Operations{" "}
+                </div>
                 <p className="text-muted">
-                Optimizing processes and workflows to enhance efficiency and productivity                </p>
+                  Optimizing processes and workflows to enhance efficiency and
+                  productivity{" "}
+                </p>
               </div>
             </div>
           </div>
@@ -87,81 +102,41 @@ export default function Example() {
 
         {/* About us section */}
 
-        <span id="about" ref={secRefs.about} ></span>
+        <span id="about" ref={secRefs.about}></span>
 
-        <section
-          
-          className="bg-[#FAFAFA] w-full flex flex-col  items-center  "
-        >
+        <section className="bg-[#FAFAFA] w-full flex flex-col  items-center  ">
           <AboutusSection />
         </section>
         {/* our product section */}
-        <span id="products" ref={secRefs.product} ></span>
+        <span id="products" ref={secRefs.product}></span>
 
-        <section
-          className=" w-full grid md:grid-cols-2 p-6 md:p-20 my-16 max-w-[1980px] lg:px-36"
-        >
+        <section className=" w-full grid md:grid-cols-2 p-6 md:p-20 my-16 max-w-[1980px] lg:px-36">
           <OurProductSection />
         </section>
 
         {/* STATS section */}
         <section>
-          <div className="border-t border-muted m-10 ">
-            <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-4 gap-16 pt-16">
-              <div className="flex items-center gap-4">
-                <span className="text-3xl">
-                  324
-                  <span className="text-[#5956E8]">+</span>
-                </span>
-                <span className="text-muted">
-                  CLIENTS <br /> WORLDWIDE
-                </span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-3xl">
-                  975
-                  <span className="text-[#FF1850]">+</span>
-                </span>
-
-                <span className="text-muted">
-                  PROJECTS <br /> COMPLETED
-                </span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-3xl">
-                  25
-                  <span className="text-[#FFDC60]">+</span>
-                </span>
-                <span className="text-muted">
-                  TEAM <br /> MEAMBERS
-                </span>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <span className="text-3xl">
-                  85m
-                  <span className="text-[#38E55E]">+</span>
-                </span>
-                <span className="text-muted">
-                  REVENUE <br /> GENERATED
-                </span>
-              </div>
-            </div>
-          </div>
+          <StatsSection />
         </section>
         {/*Product USP section*/}
-        <section id="usp" className="flex bg-[#E8F5FF] py-16  flex-col mt-28">
+        <section
+          id="usp"
+          className="flex bg-[#E8F5FF] w-full py-24 justify-center items-center flex-col mt-28"
+        >
           <UsepSectin />
           {/*TODO: have to do some work here prob need interactive components*/}
         </section>
         {/* Testimonial section */}
-        <section id="testimonial" className="my-24 ">
+        <section
+          id="testimonial"
+          className="my-24 max-w-[1980px] lg:px-36 px-6 "
+        >
           <TestimonialSection />
         </section>
         {/* Founders Section */}
         <TeamSection />
         {/*Trusted By section*/}
-        <section className="my-32 flex items-center flex-col max-w-[1980px] lg:px-36">
+        <section className="mt-32 flex items-center flex-col max-w-[1980px] lg:px-36">
           <h2 className="font-bold text-3xl text-center mb-2 px-4">
             Trusted By Teams Around The Globally
           </h2>
@@ -170,13 +145,32 @@ export default function Example() {
             <br />
             Brought To You Transform The Way You Work.
           </p>
-          <div className="grid lg:flex grid-cols-2 p-4 gap-16 mt-16 ">
+        </section>
+        <div className="my-16 hidden md:block ">
+          <motion.div
+            transition={{ duration: 15, ease: "linear", repeat: Infinity }}
+            initial={{ x: "-50%" }}
+            animate={{ x: "0" }}
+            className=" flex  p-4 gap-28 mt-16"
+          >
+            {[...Array(10)].map(() => (
+              <>
+                <Image alt="onboardme logo" src={ClientImg1} />
+                <Image alt="client.sport logo" src={ClientImg2} />
+                <Image alt="Lorem logo" src={ClientImg3} />
+                <Image alt="Berry logo" src={ClientImg4} />
+              </>
+            ))}
+          </motion.div>
+        </div>
+        <div className="grid grid-cols-2  p-4 gap-16 mt-16 my-16 md:hidden  ">
+          <>
             <Image alt="onboardme logo" src={ClientImg1} />
             <Image alt="client.sport logo" src={ClientImg2} />
             <Image alt="Lorem logo" src={ClientImg3} />
             <Image alt="Berry logo" src={ClientImg4} />
-          </div>
-        </section>
+          </>
+        </div>
         <footer className=" md:px-16 w-full max-w-7xl mt-24">
           <form
             style={{
@@ -253,7 +247,6 @@ export default function Example() {
                 <ul className="flex flex-col">
                   <div className="text-primary   ">Say Hellow</div>
                   <div className=" flex flex-col gap-1">
-                    
                     <div>
                       <span>
                         {" "}
@@ -263,7 +256,6 @@ export default function Example() {
                         >
                           {" "}
                           <Envelope className="h-5 w-5  " /> Contact
-                         
                         </a>
                       </span>
                     </div>
@@ -273,7 +265,11 @@ export default function Example() {
             </div>
           </div>
 
-          <div id="contact" ref={secRefs.contact} className="text-muted flex w-full my-4 px-2 text-sm">
+          <div
+            id="contact"
+            ref={secRefs.contact}
+            className="text-muted flex w-full my-4 px-2 text-sm"
+          >
             <span className="block">
               Copyright © <span className="text-secondary font-bold"></span> |
               is Proudly Powered by Altheory

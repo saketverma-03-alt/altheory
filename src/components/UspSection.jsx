@@ -29,58 +29,57 @@ export function UsepSectin() {
               onClick={(e) => setSelected(0)}
               value={0}
               className={`${
-                selected === 0 ? "text-primary shadow-bal" : ""
-              } px-6 py-4 flex gap-2  text-left h-fit
-               `}
+                selected === 0
+                  ? "text-primary shadow-bal bg-white"
+                  : "opacity-80"
+              } w-fit px-8 py-6 flex gap-6  text-left  h-fit font-[400] text-xl`}
             >
-              <div className="h-12 w-12 grid place-items-center">
+              <div className="grid place-items-center">
                 <Lightbulb className="self-center " />
               </div>
-              <span className="flex-1 block my-auto text-sm">
-                Customizable Solutions
-              </span>
+              <span className="flex-1 block  ">Customizable Solutions</span>
             </button>
             <button
               onClick={(e) => setSelected(1)}
               value={0}
               className={`${
-                selected === 1 ? "text-primary shadow-bal" : ""
-              } px-6 py-4 flex gap-2  text-left h-fit  `}
+                selected === 1
+                  ? "text-primary shadow-bal bg-white"
+                  : "opacity-80"
+              } w-fit px-8 py-6 flex gap-6  text-left  h-fit font-[400] text-xl`}
             >
-              <div className="h-12 w-12 grid place-items-center">
+              <div className="grid place-items-center">
                 <Lightbulb className="self-center " />
               </div>
-              <span className="flex-1 block my-auto text-sm">
-                Customizable Solutions
-              </span>
+              <span className="flex-1 block  ">Customizable Solutions</span>
             </button>
             <button
               onClick={(e) => setSelected(2)}
               value={2}
               className={`${
-                selected === 2 ? "text-primary shadow-bal" : ""
-              } px-6 py-4 flex gap-2  text-left  h-fit `}
+                selected === 2
+                  ? "text-primary shadow-bal bg-white"
+                  : "opacity-80"
+              } w-fit px-8 py-6 flex gap-6  text-left  h-fit font-[400] text-xl`}
             >
-              <div className="h-12 w-12 grid place-items-center">
+              <div className="grid place-items-center">
                 <Lightbulb className="self-center " />
               </div>
-              <span className="flex-1 block my-auto text-sm">
-                Customizable Solutions
-              </span>
+              <span className="flex-1 block  ">Customizable Solutions</span>
             </button>
             <button
               onClick={(e) => setSelected(3)}
               value={0}
               className={`${
-                selected === 3 ? "text-primary shadow-bal" : ""
-              } px-6 py-4 flex gap-2  text-left  h-fit `}
+                selected === 3
+                  ? "text-primary shadow-bal bg-white"
+                  : "opacity-80"
+              } w-fit px-8 py-6 flex gap-6  text-left  h-fit font-[400] text-xl`}
             >
-              <div className="h-12 w-12 grid place-items-center">
+              <div className="grid place-items-center">
                 <Lightbulb className="self-center " />
               </div>
-              <span className="flex-1 block my-auto text-sm">
-                Customizable Solutions
-              </span>
+              <span className="flex-1 block  ">Customizable Solutions</span>
             </button>
           </div>
           <div className=" p-6 col-span-2 ">
@@ -98,42 +97,45 @@ export function UsepSectin() {
 const Usp1 = () => {
   return (
     <>
-    <Transition
-               appear={true}
-               show={true}
-               as="div"
-               className={'grid lg:grid-cols-2 gap-14  w-full'}
-               enter="transition-all duration-500"
-               enterFrom="opacity-0 scale-90 "
-               enterTo="opacity-100 "
-               leave="transition-opacity duration-200"
-               leaveFrom="opacity-100 "
-               leaveTo="opacity-0 scale-90  "
-    >
-
-      <Image alt="product usp" src={MainImage} className="rounded-xl  object-cover lg:mr-20" />
-      <div className="flex justify-center flex-col">
-        <figure
-          className="rounded-full shadow-bal grid place-items-center p-6    border-gray-200 h-20 w-20 md:h-24 md:w-24
+      <Transition
+        appear={true}
+        show={true}
+        as="div"
+        className={"grid lg:grid-cols-2 gap-14  w-full"}
+        enter="transition-all duration-500"
+        enterFrom="opacity-0 scale-90 "
+        enterTo="opacity-100 "
+        leave="transition-opacity duration-200"
+        leaveFrom="opacity-100 "
+        leaveTo="opacity-0 scale-90  "
+      >
+        <Image
+          alt="product usp"
+          src={MainImage}
+          className="rounded-xl  object-cover lg:mr-20"
+        />
+        <div className="flex justify-center flex-col">
+          <figure
+            className="rounded-full bg-white shadow-bal grid place-items-center p-6    border-gray-200 h-20 w-20 md:h-24 md:w-24
         "
-        >
-          <Image alt="icon" src={CustmSol} className="h-full w-full" />
-        </figure>
-        <p
-          className="mt-8 mb-8 max-w-64 text-muted
+          >
+            <Image alt="icon" src={CustmSol} className="h-full w-full" />
+          </figure>
+          <p
+            className="mt-8 mb-8 max-w-80 text-xl text-muted
         "
-        >
-          We understand that every business is unique. Our software can be fully
-          customized to align with your specific workflows, processes, and
-          industry requirements, ensuring optimal performance and productivity
-        </p>
+          >
+            We understand that every business is unique. Our software can be
+            fully customized to align with your specific workflows, processes,
+            and industry requirements, ensuring optimal performance and
+            productivity
+          </p>
 
-        <button className="btn-primary w-fit  text-white rounded-xl   px-6">
-          Explor Now
-        </button>
-      </div>
-    </Transition>
-
+          <button className="btn-primary w-fit font-bold py-4  text-white rounded-xl   px-6">
+            Explor Now
+          </button>
+        </div>
+      </Transition>
     </>
   );
 };

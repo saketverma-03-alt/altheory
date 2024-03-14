@@ -13,11 +13,13 @@ export function HeroSection() {
           <div className="">
             <motion.h1
               initial={{
+                visibility: 'hidden',
                 translateX: -30,
-                opacity: 0
+                opacity: 0,
               }}
               animate={{
                 opacity: 100,
+                visibility: 'visible',
                 scaleY: 1,
                 translateX :0,
                 borderRadius: ["0%", "0%", "50%", "50%", "0%"],

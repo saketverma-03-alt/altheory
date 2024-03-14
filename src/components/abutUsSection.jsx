@@ -1,36 +1,41 @@
+import {
+  animateSlideFromLeft,
+  slideFromLeft,
+  slideFromRight,
+} from "@/util/animationVarient";
 import AboutUs from "@public/aboutUs.png";
 import { motion } from "framer-motion";
 
 import Image from "next/image";
 export function AboutusSection() {
-  const variants = {
-    hidden: { opacity: 0, x: -200, y: 0 },
-    enter: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: 0, y: -100 }
-};
-const variants2 = {
-  hidden: { opacity: 0, x: 200, y: 0 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: 0, y: 100 }
-};
+  //   const variants = {
+  //     hidden: { opacity: 0, x: -200, y: 0 },
+  //     enter: { opacity: 1, x: 0, y: 0 },
+  //     exit: { opacity: 0, x: 0, y: -100 }
+  // };
+  // const variants2 = {
+  //   hidden: { opacity: 0, x: 200, y: 0 },
+  //   enter: { opacity: 1, x: 0, y: 0 },
+  //   exit: { opacity: 0, x: 0, y: 100 }
+  // };
   return (
     <>
       <div className="grid md:grid-cols-2 p-10 md:p-20 max-w-[1980px] lg:px-36">
         <motion.figure
-           variants={variants}
-           initial="hidden"
-           whileInView="enter"
-          //  exit="exit"
-           transition={{ type: 'linear',duration: .5 }}
+          variants={slideFromLeft}
+          initial="hidden"
+          whileInView="enter"
+          exit="exit"
+          transition={{ type: "linear", duration: 0.5 }}
         >
-          <Image  src={AboutUs} alt="about us section image"/>
+          <Image src={AboutUs} alt="about us section image" />
         </motion.figure>
         <motion.div
-             variants={variants2}
-             initial="hidden"
-             whileInView="enter"
-            //  exit="exit"
-             transition={{ type: 'linear',duration: .5 }}
+          variants={slideFromRight}
+          initial="hidden"
+          whileInView="enter"
+          exit="exit"
+          transition={{ type: "linear", duration: 0.5 }}
         >
           <div className="mb-2 text-xl font-semibold ">About Us</div>
           <h3 className="mb-6 text-4xl sm:text-5xl leading-loose font-extrabold">
