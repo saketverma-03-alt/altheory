@@ -54,41 +54,43 @@ export function TeamSection() {
   return (
     <>
       <section className="bg-[#2D3853] text-white h-fit py-36 w-full flex justify-center items-center">
-        <div className="grid md:grid-cols-2 px-8 gap-16 max-w-[1980px] lg:px-36 w-full ">
+        <div className="grid md:grid-cols-2 grid-cols-1 px-8 gap-32 max-w-[1980px] lg:px-36 w-full ">
           <motion.div
             variants={slideFromLeft}
             initial="hidden"
             whileInView="enter"
             exit="exit"
             transition={{ type: "linear", duration: 0.5 }}
-            className="relative flex flex-col w-full"
+            className="relative flex flex-col w-full ml-auto"
           >
-            <h2 className="relative z-[2]">
-              <span className="block ml-6 mb-[-1.5rem] text-3xl opacity-70">
-                Meet
-              </span>
-              <br />
-              <span className=" font-extrabold text-5xl">Our Founder</span>
-            </h2>
-            <Image
-              src={fillImage}
-              className="absolute top-[0px] left-[-100px] z-[1] "
-            />
+            <div className="mx-auto md:mr-0">
+              <h2 className="relative z-[2] ">
+                <span className="block ml-6 mb-[-1.5rem] text-3xl opacity-70">
+                  Meet
+                </span>
+                <br />
+                <span className=" font-extrabold text-5xl">Our Founder</span>
+              </h2>
+              <Image
+                src={fillImage}
+                className="absolute top-[0px] translate-x-[-50px] z-[1] "
+              />
 
-            <figure className="p-4 max-w-3xl ">
-              <Image
-                alt="Ravi Sankar Founder"
-                src={FounderImage}
-                width={400}
-                height={700}
-                className="z-[10] relative"
-              />
-              <Image
-                alt="vector graphic"
-                src={waveImage}
-                className="absolute bottom-[-30px] right-96 z-20 "
-              />
-            </figure>
+              <figure className="p-4  max-w-3xl ">
+                <Image
+                  alt="Ravi Sankar Founder"
+                  src={FounderImage}
+                  width={400}
+                  height={700}
+                  className="z-[10] relative "
+                />
+                <Image
+                  alt="vector graphic"
+                  src={waveImage}
+                  className="absolute bottom-[-30px] right-0 z-20 "
+                />
+              </figure>
+            </div>
           </motion.div>
           <motion.div
             variants={slideFromRight}

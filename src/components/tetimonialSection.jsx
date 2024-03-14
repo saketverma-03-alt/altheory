@@ -23,7 +23,7 @@ export function TestimonialSection() {
     <>
       <div className="grid md:grid-cols-2 w-full ">
         {/* info */}
-        <div className="p-10 md:p-16">
+        <div className="">
           <h3 className="font-bold">TESTIMONIALS</h3>
 
           <h3 className="text-6xl font-bold  mt-2 mb-6">

@@ -19,7 +19,10 @@ export default function CareerPage() {
         </p>
         <p className="text-xl">
           Email us your resume at{" "}
-          <span className="text-orange-600">email@us.in</span>{" "}
+          <a
+            className="flex gap-2 items-center hover:text-primary"
+            href="mailto&#58;hr&#64;altheory&#46;com"
+          ></a>
         </p>
       </div>
       <Footer />
