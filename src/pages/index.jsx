@@ -30,7 +30,6 @@ import {
   Twitter,
   Youtube,
 } from "react-bootstrap-icons";
-import CountUp from "react-countup";
 import StatsSection from "@/components/statsSec";
 import { motion } from "framer-motion";
 
@@ -137,9 +136,16 @@ export default function Example() {
         <TeamSection />
         {/*Trusted By section*/}
         <section className="mt-32 flex items-center flex-col max-w-[1980px] lg:px-36">
-          <h2 className="font-bold text-3xl text-center mb-2 px-4">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            // animate={{ opacity: 100 }}
+            whileInView={{ opacity: 100 }}
+            exit={{ opacity: 0 }}
+            transition={{ type: "linear", duration: 2 }}
+            className="font-bold text-3xl text-center mb-2 px-4"
+          >
             Trusted By Teams Around The Globally
-          </h2>
+          </motion.h2>
           <p className="text-muted text-center text-sm px-6">
             Unique And Powerful Suite Of Software To Run Your Entire Business,
             <br />

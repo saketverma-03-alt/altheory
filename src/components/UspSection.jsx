@@ -23,8 +23,8 @@ export function UsepSectin() {
         the difference today.
       </p>
       <div className="flex mt-24 max-w-[1980px] lg:px-36 justify-center items-center">
-        <div className="grid grid-cols-1 place-items-center lg:grid-cols-3 p-4 ">
-          <div className="grid grid-cols-2 lg:grid-cols-1 w-fit h-fit   text-left">
+        <div className="grid grid-cols-1  place-items-center lg:grid-cols-3 p-4 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 w-fit h-fit   text-left">
             <button
               onClick={(e) => setSelected(0)}
               value={0}
