@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import { Nav } from "@/components/navbar";
+import { Envelope } from "react-bootstrap-icons";
 
 export default function CareerPage() {
   return (
@@ -17,12 +18,14 @@ export default function CareerPage() {
           streamline their operations, boost efficiency, and achieve their
           business goals.
         </p>
-        <p className="text-xl">
-          Email us your resume at{" "}
+        <p className="text-xl flex gap-2 items-center">
           <a
-            className="flex gap-2 items-center hover:text-primary"
+            className="flex gap-2 items-center hover:text-primary  hover:border-b-primary border-2 border-transparent transition-all"
             href="mailto&#58;hr&#64;altheory&#46;com"
-          ></a>
+          >
+            <Envelope /> Email
+          </a>
+          us your resume{" "}
         </p>
       </div>
       <Footer />
