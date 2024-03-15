@@ -41,7 +41,7 @@ export default function Footer() {
               type="submit"
               placeholder="asda"
             >
-              Subscripbe
+              Subscribe
             </button>
           </div>
         </form>

@@ -1,11 +1,11 @@
 import FounderImage from "@public/founderImage.png";
 import waveImage from "@public/waves.svg";
 import fillImage from "@public/Fill.svg";
-import AtulSoni from "@public/atul-soni.png";
-import saket from "@public/saket.png";
-import dev_narayn from "@public/dev_narayn.png";
-import srb from "@public/srb.png";
-import alam from "@public/mohad-alam.png";
+import AtulSoni from "@public/team/atul.png";
+import saket from "@public/team/saket.png";
+import dev_narayn from "@public/team/dev.png";
+import srb from "@public/team/sourabh.png";
+import alam from "@public/team/alam.png";
 import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Twitter } from "react-bootstrap-icons";
 import { motion } from "framer-motion";
@@ -21,19 +21,19 @@ const teamMembers = [
   {
     name: "Atul Soni",
     des: "Product Manager",
-    css: "from-blue-100 to-blue-700",
+    css: "from-gray-200 to-gray-300",
     image: AtulSoni,
   },
   {
     name: "Mohad Alam",
     des: "UI UX Designer",
-    css: "from-gray-200 to-gray-500",
+    css: "from-blue-200 to-blue-600",
     image: alam,
   },
   {
     name: "Sourab Chhabra",
     des: "Frontend Devloper",
-    css: "from-gray-200 to-gray-200",
+    css: "from-gray-200 to-gray-500",
     image: srb,
   },
   {
@@ -45,7 +45,7 @@ const teamMembers = [
   {
     name: "Saket Verma",
     des: "Frontend Devoper",
-    css: "from-sky-400 to-sky-200",
+    css: "from-sky-600 to-sky-200",
     image: saket,
   },
 ];
@@ -156,14 +156,14 @@ export function TeamSection() {
             Suspendisse urna nibh, viverra non
           </p>
         </motion.div>
-        <div className="grid relative grid-cols-2 lg:grid-cols-3 col-span-2 gap-4 text-black">
+        <div className="grid  h-fit max-w-fit  relative grid-cols-2 lg:grid-cols-3 col-span-2 gap-4 text-black">
           {/* team members frame */}
           {teamMembers.map((item) => {
             return (
               <>
-                <div className="border  md:p-4 flex flex-col gap-2 p-2 group duration-400 transition-all  delay-0 hover:rounded-none rounded-t-full  hover:shadow-xl  ">
+                <div className="border max-h-64 sm:max-h-[22rem]  max-w-64  md:p-4 flex flex-col gap-2 p-2 group duration-400 transition-all  delay-0 hover:rounded-none rounded-t-full  hover:shadow-xl  ">
                   <figure
-                    className={`${item.css} h-72  flex justify-end items-end  group-hover:srounded-t-full relative ease-in-out duration-400  transition-all bg-gradient-to-t pt-2 md:pt-6 group-hover:rounded-none rounded-t-full `}
+                    className={`${item.css} h-72  flex justify-end items-end  group-hover:srounded-t-full relative ease-in-out duration-400  transition-all bg-gradient-to-t  group-hover:rounded-none rounded-t-full `}
                   >
                     {/* <div className=""> */}
                     <Image
