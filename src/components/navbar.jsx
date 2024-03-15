@@ -8,11 +8,11 @@ import { List, MenuButton } from "react-bootstrap-icons";
 import Link from "next/link";
 
 const navigation = [
-  { name: "Home", href: "/#home", current: false },
-  { name: "About", href: "/#about", current: false },
-  { name: "Products", href: "/#products", current: false },
-  { name: "Careers", href: "/career", current: false },
-  { name: "Contact", href: "/#contact", current: false },
+  { name: "Home", href: "home", current: false },
+  { name: "About", href: "about", current: false },
+  { name: "Products", href: "products", current: false },
+  { name: "Careers", href: "career", current: false },
+  { name: "Contact", href: "contact", current: false },
 ];
 
 function classNames(...classes) {
@@ -20,6 +20,9 @@ function classNames(...classes) {
 }
 
 export const Nav = ({ activeTabId }) => {
+  useEffect(() => {
+    console.log("tab", activeTabId);
+  }, [activeTabId]);
   return (
     <Disclosure
       as="nav"
@@ -55,12 +58,14 @@ export const Nav = ({ activeTabId }) => {
                       {navigation.map((item) => (
                         <Link
                           key={item.name}
-                          href={item.href}
+                          href={
+                            (item.href === "career" ? "/" : "/#") + item.href
+                          }
                           className={classNames(
                             item.current
                               ? " "
                               : " hover:border-b-primary border-b-4 transition-colors  hover:",
-                            "/#" + activeTabId === item.href
+                            "" + activeTabId === item.href
                               ? "border-b-primary "
                               : " border-b-transparent",
                             " px-3 py-2 text-md lg:text-xl font-medium"

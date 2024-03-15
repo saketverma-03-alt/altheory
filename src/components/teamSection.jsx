@@ -156,7 +156,7 @@ export function TeamSection() {
             Suspendisse urna nibh, viverra non
           </p>
         </motion.div>
-        <div className="grid  h-fit max-w-fit  relative grid-cols-2 lg:grid-cols-3 col-span-2 gap-4 text-black">
+        <div className="grid  h-fit max-w-fit justify-self-center  relative grid-cols-2 lg:grid-cols-3 col-span-2 gap-4 text-black">
           {/* team members frame */}
           {teamMembers.map((item) => {
             return (

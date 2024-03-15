@@ -103,13 +103,13 @@ export default function Example() {
 
         <span id="about" ref={secRefs.about}></span>
 
-        <section className="bg-[#FAFAFA] w-full flex flex-col  items-center  ">
+        <section className="bg-[#FAFAFA] py-16 mt-20 w-full flex flex-col  items-center  ">
           <AboutusSection />
         </section>
         {/* our product section */}
-        <span id="products" ref={secRefs.product}></span>
+        <span id="products" className="" ref={secRefs.product}></span>
 
-        <section className=" w-full grid md:grid-cols-2 p-6 md:p-20 my-16 max-w-[1980px] lg:px-36">
+        <section className=" w-full grid md:grid-cols-2 p-6 md:p-20 mt-16 mb-12 max-w-[1980px] lg:px-36">
           <OurProductSection />
         </section>
 
