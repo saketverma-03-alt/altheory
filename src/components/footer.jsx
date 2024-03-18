@@ -28,9 +28,13 @@ export default function Footer() {
         >
           <h3 className="text-2xl font-bold text-[#231656] flex-1">
             Get Updates By Subscribe <br />
-            Our Weekly <span className="text-white"> Newsletter</span>
+            Our Weekly{" "}
+            <span className="text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] ">
+              {" "}
+              Newsletter
+            </span>
           </h3>
-          <div className="flex md:items-center w-full md:w-fit mt-8 md:mt-0 md:flex-row gap-4 flex-col">
+          <div className="flex md:items-center w-full md:w-fit mt-8 md:mt-0 md:flex-row gap-2 flex-col">
             <input
               type="email"
               className="p-4 rounded-full w-full"

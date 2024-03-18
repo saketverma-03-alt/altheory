@@ -1,7 +1,7 @@
 import ProdSecImaeg from "@public/product-main.png";
-import ProdSecIcon1 from "@public/prod-sec-icon-1.svg";
+import ProdSecIcon1 from "@public/onbordme-logo.svg";
 import ProdSecIcon2 from "@public/prod-sec-icon-2.png";
-import ProdSecIcon3 from "@public/prod-sec-icon-3.png";
+import ProdSecIcon3 from "@public/clusterhrm-logo.svg";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -28,7 +28,7 @@ export function OurProductSection() {
 
         <h3 className="mb-6 sm:leading-normal text-4xl sm:text-5xl font-extrabold">
           {" "}
-          Elevate Your Lifestyle With Our Premium{" "}
+          Elevate Your Business Logic with Altheory’s Product{" "}
           <span className="text-primary">Products</span>
         </h3>
         <div className="space-y-2  max-w-lg mb-8 ">
@@ -36,14 +36,15 @@ export function OurProductSection() {
             onClick={() => setSelectedIdx(1)}
             className="flex gap-4 transition-color duration-200  hover:bg-primary group items-center p-4 rounded-xl shadow-sm"
           >
-            <figure className="bg-gray-200 rounded-full p-3 h-fit w-fit">
-              <Image alt="icon" src={ProdSecIcon1} />
+            <figure className="bg-white shadow-lg rounded-full p-3 h-fit w-fit">
+              <Image alt="icon" src={ProdSecIcon1} height={32} width={32} />
             </figure>
             <div className="flex-1 group-hover:text-white">
               <h3 className="text-2xl font-semibold ">Onbordme</h3>
               <p className="text-muted text-sm group-hover:text-white/90 ">
-                Lorem Ipsum has been the industry standard from a dummy text
-                ever since the unknown printer to galley of type book.{" "}
+                At OnbordMe, we understand the challenges of employee
+                onboarding, and our cutting-edge software is designed to
+                simplify the entire process.{" "}
               </p>
             </div>
           </div>
@@ -51,14 +52,14 @@ export function OurProductSection() {
             onClick={() => setSelectedIdx(2)}
             className="flex gap-4 transition-color duration-200 hover:bg-primary group items-center p-4 rounded-xl shadow-sm"
           >
-            <figure className="bg-gray-200 rounded-full p-3 h-fit w-fit">
+            <figure className="bg-white shadow-lg rounded-full p-3 h-fit w-fit">
               <Image alt="icon" src={ProdSecIcon2} />
             </figure>
             <div className="flex-1 group-hover:text-white">
-              <h3 className="text-2xl font-semibold ">Cluster HRMS</h3>
+              <h3 className="text-2xl font-semibold ">Pyramid CRM </h3>
               <p className="text-muted  text-sm group-hover:text-white/90">
-                Lorem Ipsum has been the industry standard from a dummy text
-                ever since the unknown printer to galley of type book.{" "}
+                With Pyramid CRM, businesses can streamline their workflow
+                management, From lead generation to post-sales support.{" "}
               </p>
             </div>
           </div>
@@ -66,16 +67,17 @@ export function OurProductSection() {
             onClick={() => setSelectedIdx(3)}
             className="flex gap-4 transition-color duration-200 hover:bg-primary group items-center p-4 rounded-xl shadow-sm"
           >
-            <figure className="bg-gray-200 rounded-full p-3 h-fit w-fit">
-              <Image alt="icon" src={ProdSecIcon3} />
+            <figure className="bg-white shadow-lg rounded-full p-3 h-fit w-fit">
+              <Image alt="icon" src={ProdSecIcon3} height={32} width={32} />
             </figure>
             <div className="flex-1">
               <h3 className="text-2xl font-semibold group-hover:text-white ">
-                Facility Management
+                Cluster HR
               </h3>
               <p className="text-muted  text-sm group-hover:text-white/90">
-                Lorem Ipsum has been the industry standard from a dummy text
-                ever since the unknown printer to galley of type book.{" "}
+                CLUSTER HR is designed to help businesses streamline HR
+                processes, reduce administrative burdens, enhance employee
+                engagement, and ensure compliance with Employee regulations.{" "}
               </p>
             </div>
           </div>

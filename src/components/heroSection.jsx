@@ -6,22 +6,22 @@ import { useEffect } from "react";
 export function HeroSection() {
   return (
     <>
-      <div className="grid md:grid-cols-2  text-[#303030] h-full max-w-[1980px] lg:overflow-x-clip ">
+      <div className="grid md:grid-cols-2  text-[#303030] h-full max-w-[1980px] lg:overflow-x-visible ">
         <div className=" relative flex flex-col   col-span-2 lg:col-span-1 px-6 md:px-32 my-14">
           <div className="absolute z-10 bg-[#FDA55C]/50 h-64 w-64 translate-y-[-6rem]  left-12 blur-3xl opacity-80"></div>
 
           <div className="">
             <motion.h1
               initial={{
-                visibility: 'hidden',
+                visibility: "hidden",
                 translateX: -30,
                 opacity: 0,
               }}
               animate={{
                 opacity: 100,
-                visibility: 'visible',
+                visibility: "visible",
                 scaleY: 1,
-                translateX :0,
+                translateX: 0,
                 borderRadius: ["0%", "0%", "50%", "50%", "0%"],
               }}
               transition={{
@@ -37,7 +37,7 @@ export function HeroSection() {
             <motion.p
               initial={{
                 translateX: -100,
-                opacity: 0
+                opacity: 0,
               }}
               animate={{
                 opacity: 100,
@@ -67,13 +67,11 @@ export function HeroSection() {
             alt="hero section image"
             src={BannerImage}
             width={1260}
-            
             height={1980}
             className="scale-[1.25] z-0 relative"
           />
         </div>
       </div>
-
     </>
   );
 }

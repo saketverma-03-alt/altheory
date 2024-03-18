@@ -26,7 +26,7 @@ export const Nav = ({ activeTabId }) => {
   return (
     <Disclosure
       as="nav"
-      className="fixed top-0 backdrop-blur-lg z-[999] bg-white/50 w-full"
+      className="sticky top-0 backdrop-blur-lg z-[999] bg-white/50 w-full"
     >
       {({ open }) => (
         <>
